@@ -1,0 +1,51 @@
+/*albums*/
+.al-header {
+	margin: 3%;
+}
+.al-header span {
+	color: #a1a1a1;
+}
+.al-name-select {
+	width: 100%;
+	margin-top: 71px;
+	font-size: 30px;
+}
+
+.al-line {
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 7px;
+	margin-bottom: 28px;
+}
+/*.al-wrapper-albums {
+	margin: 3% 0 0 3%;
+}*/
+.al-some-albums {
+	background: #fff;
+	width: 100%;
+	margin-bottom: 29px;
+}
+.al-img {
+	width: 100%;
+}
+.al-name-albums{
+	color: #232323;
+	margin: 5% 0 0 5%;
+}
+.al-some-text {
+	color: #a1a1a1;
+	margin-left: 5%;
+	font-size: 12px;
+}
+.al-btn-add {
+	width: 80%;
+	margin: 10%;
+	height: 30px;
+	font-weight: bold;
+}
+.center-inside-content{
+	float: left;
+  display: block;
+  width: 100%;
+	background: #eaeaea;
+}
+/*albums*/

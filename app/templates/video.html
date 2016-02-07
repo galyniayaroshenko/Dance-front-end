@@ -1,0 +1,21 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+<div class="container center-inside-content">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="al-name-select">Відео з виступів Черемоша <span>:</span></div>
+          <div class="al-line"></div>
+        </div>
+      </div>
+      <div class="al-wrapper-albums">
+      <div class="row padding-video">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="video in videoList">
+          <div class="al-some-albums">
+            <a ui-sref="base.videoView({id:video.objectId})"><img class="al-img" src="{{video.img.url}}"></a>
+            <h5 class="al-name-albums">{{video.name}}</h5>
+          </div>
+        </div>
+
+
+    </div>
+</div>
+</header>

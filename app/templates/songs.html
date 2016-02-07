@@ -1,0 +1,27 @@
+<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+      <div class="container center-inside-content">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="al-name-select">Пісні з виступів Черемоша <span>:</span></div>
+                <div class="al-line"></div>
+              </div>
+            </div>
+            <div class="al-wrapper-albums">
+            <div class="row padding-video">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="musics in musicList">
+                <div class="al-some-albums">
+                  <a ui-sref="base.viewAlbums({id:albums._id})"><img class="al-img" src="{{musics.img.url}}"></a>
+                  <h5 class="al-name-albums">{{musics.title}}</h5>
+                  <p class="al-some-text">{{musics.description}}</p>
+                  <button class="al-btn-add"><a ui-sref="base.songsView({id:musics.objectId})" class="button_song">Слухати</a></button>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+
+
+<header>
