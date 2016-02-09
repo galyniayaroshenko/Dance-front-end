@@ -1,7 +1,7 @@
 angular.module('myApp')
 .controller('MainListController',
-  ['$scope', '$state', '$window', 'AboutUs', 'Portfolio', 'PeopleEffort', 'Contact', '$stateParams', 'Category',
-    function($scope, $state, $window, AboutUs, Portfolio, PeopleEffort, Contact, $stateParams, Category) {
+  ['$scope', '$state', '$window', 'AboutUs', 'Portfolio', 'PeopleEffort', 'Contact', '$stateParams', 'Category','$timeout',
+    function($scope, $state, $window, AboutUs, Portfolio, PeopleEffort, Contact, $stateParams, Category, $timeout) {
   //$scope.musicList = Music.get();
   Category.get(function(data) {
     $scope.category = data.results;
@@ -14,11 +14,36 @@ angular.module('myApp')
     for (var i = 0; i < $scope.aboutUsList.length; i++) {
       $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,700);
     }
+    // $(document).ready(function() {
+    //   $(".popup").magnificPopup({type:"image"});
+    // });
     });
+
+
  Portfolio.get(function(data){
     $scope.portfolioUsList = data.results;
-    console.log('Portholio', $scope.portfolioUsList);
+    if ($scope.portfolioUsList) {
+      $timeout(function() {
+          console.log('Portholio', $scope.portfolioUsList);
+          $(document).ready(function() {
+            $('.asd').addClass("filter");
+            $("#portfolio_grid").mixItUp();
+
+            $(".s_portfolio li").click(function() {
+              $(".s_portfolio li").removeClass("active");
+              $(this).addClass("active");
+            });
+            $(".portfolio_item").each(function(i) {
+              $(this).find("a").attr("href", "#work_" + i);
+              $(this).find(".podrt_descr").attr("id", "work_" + i);
+            });
+          });
+        }, 5000);
+
+    }
     });
+
+
  PeopleEffort.get(function(data){
     $scope.peopleEffortList = data.results;
     console.log('PeopleEffort', $scope.peopleEffortList);
@@ -60,6 +85,7 @@ console.log('c', content);
   Contact.get(function(data){
     $scope.contactList = data.results;
     console.log('Contact', $scope.contactList);
+
     });
 
 console.log("smile");

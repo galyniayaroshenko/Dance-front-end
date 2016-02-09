@@ -13,10 +13,22 @@
 	margin: 0;
 	color:#000;
 	text-transform:uppercase;
+		text-align: center;
 }
 .contact_left p{
 	color:#999;
     line-height:1.8em;
+		text-align: center;
+}
+.contact_left p.head{
+	font-weight: bold;
+	padding: 10px 0 10px;
+}
+.contact_left p.addr{
+	padding-bottom: 50px;
+}
+.contact_left p.some-text{
+	padding: 15px 0 15px;
 }
 .text-fild {
 	width: 48%;

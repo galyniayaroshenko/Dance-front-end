@@ -423,7 +423,8 @@ svg path {
   .contact_box .contacts_icon {
     font-size: 30px; }
   .contact_box p {
-    margin-top: 5px; }
+    margin-top: 5px;
+    margin-right: 10px; }
 
 .main_form button {
   border: none;
@@ -698,3 +699,6 @@ svg path {
 /*owl*/
 .form-group input, .form-group textarea {
   padding: 0px; }
+
+.img-responsive {
+  margin: 0 auto; }

@@ -1,4 +1,3 @@
-
 <section id="about" class="s_about bg_light" header-animate left-right-animate animate>
 	<div class="section_header">
 		<h2>Про нас</h2>
@@ -6,13 +5,13 @@
 			<div class="s_descr">Познайомимося ближче</div>
 		</div>
 	</div>
-	<div class="section_content" portfolio header-animate>
+	<div class="section_content"  header-animate popup >
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-push-4 animation_1">
 					<h3>Фото</h3>
 					<div class="person">
-						<a ui-sref='' class="popup"><img ng-src="{{aboutUsList[0].foto.url}}" alt="Alt" /></a>
+						<a href='{{aboutUsList[0].foto.url}}' class="popup"><img ng-src="{{aboutUsList[0].foto.url}}" alt="Alt" /></a>
 					</div>
           <div class="social_wrap">
 						<ul>
@@ -41,7 +40,7 @@
 		</div>
 	</div>
 </section>
-<section class="s_portfolio bg_dark" portfolio header-animate>
+<section class="s_portfolio bg_dark"  header-animate>
 	<div class="section_header">
 		<h2>Портфоліо</h2>
 		<div class="s_descr_wrap">
@@ -53,14 +52,14 @@
 			<div class="row">
 				<div class="filter_div controls">
 					<ul>
-						<li class="filter actives" data-filter="all">Всі останні поїздки </li>
-						<li ng-repeat="categorys in category" class="filter" data-filter=".{{categorys.objectId}}">{{categorys.objectId}}{{categorys.name}}</li>
+						<li class="asd" data-filter="all">Всі останні поїздки </li>
+						<li ng-repeat="categorys in category" class="filter" data-filter=".{{categorys.objectId}}">{{categorys.name}}</li>
 					</ul>
 				</div>
 				<div id="portfolio_grid">
-					<div ng-repeat="portfolioUsLists in portfolioUsList" class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item {{portfolioUsLists.category.objectId}}">
+					<div ng-repeat="portfolioUsLists in portfolioUsList" pop class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item {{portfolioUsLists.category.objectId}}">
 						<img src="{{portfolioUsLists.img.url}}" alt="Alt" />
-						<div class="port_item_cont">
+						<div class="port_item_cont"  >
 							<h3>{{portfolioUsLists.country}}</h3>
 							<p>{{portfolioUsLists.city}}</p>
 							<a href="#" class="popup_content">Подивитися</a>
@@ -76,132 +75,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/1_2.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Польща</h3>
-							<p>Цешин</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Польща Цешин</h3>
-									<p>XXVIII Міжнародний студентський фольклорний фестиваль визначна культурна подія в регіоні. З 21 серпня по 30 серпня 2015 року, в шести містах, в провінції Сілезії, показали свою творчість колективи з Чехії, України("ЧЕРЕМОШ"), Латвії, Угорщини, Італії, Сербії і, звичайно з Польщі.</p>
-									<img src="img/portfolio-images/1_2.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/1_3.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Польща</h3>
-							<p>Цешин</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Польща Цешин</h3>
-									<p>XXVIII Міжнародний студентський фольклорний фестиваль визначна культурна подія в регіоні. З 21 серпня по 30 серпня 2015 року, в шести містах, в провінції Сілезії, показали свою творчість колективи з Чехії, України("ЧЕРЕМОШ"), Латвії, Угорщини, Італії, Сербії і, звичайно з Польщі.</p>
-									<img src="img/portfolio-images/1_3.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/2_1.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Стамбул Турція</h3>
-							<p>Турція</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Стамбул Турція</h3>
-									<p>15-ий міжнародний BÜYÜKÇEKMECE фестиваль культури і мистецтва</p>
-									<img src="img/portfolio-images/2_1.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/2_2.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Стамбул</h3>
-							<p>Турція</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3></h3>
-									<p>15-ий міжнародний BÜYÜKÇEKMECE фестиваль культури і мистецтва</p>
-									<img src="img/portfolio-images/2_2.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-3">
-						<img src="img/portfolio-images/3_1.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Львів</h3>
-							<p>Україна</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Львів Україна</h3>
-									<p>Святковий концерт Народного ансамблю пісні і танцю "Черемош" з нагоди 50-річчю ансамблю в Львівській Опері.</p>
-									<img src="img/portfolio-images/3_2.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-3">
-						<img src="img/portfolio-images/3_2.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Львів</h3>
-							<p>Україна</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Львів Україна</h3>
-									<p>Святковий концерт Народного ансамблю пісні і танцю "Черемош" з нагоди 50-річчю ансамблю в Львівській Опері.</p>
-									<img src="img/portfolio-images/3_2.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div> -->
-					<!-- <div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/2_3.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Стамбул</h3>
-							<p>Турція</p>
-							<a href="#" class="popup_content">Подивитися</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Стамбул Турція</h3>
-									<p>15-ий міжнародний BÜYÜKÇEKMECE фестиваль культури і мистецтва</p>
-									<img src="img/portfolio-images/2_3.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -252,17 +125,17 @@
 					<div class="contact_box">
 						<div class="contacts_icon icon-basic-geolocalize-05"></div>
 						<h3>Адреса:</h3>
-						<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+						<p>{{contactList[0].street}}</p>
 					</div>
 					<div class="contact_box">
 						<div class="contacts_icon icon-basic-smartphone"></div>
 						<h3>Телефон:</h3>
-						<p>+380 67 889 36 39</p>
+						<p>{{contactList[0].headTelephone}}</p>
 					</div>
 					<div class="contact_box">
 						<div class="contacts_icon icon-basic-webpage-img-txt"></div>
 						<h3>Веб-сайт:</h3>
-						<p><a href="#" target="_blank">webdesign.com</a></p>
+						<p><a href="#" target="_blank">{{contactList[0].headEmail}}</a></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">

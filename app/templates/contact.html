@@ -1,38 +1,40 @@
 <div class="grid_4" id="contact">
 <div class="container">
-  <h1 class="blog_head">Contact</h1>
+  <h1 class="blog_head">Конакти</h1>
     <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1142725182794!2d24.020006814970248!3d49.84031033902106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add717532da69%3A0xf0cb97b8441ff1fe!2z0LLRg9C7LiDQo9C90ZbQstC10YDRgdC40YLQtdGC0YHRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1453130267591" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
   <div class="contact">
-    <div class="col-md-4 contact_left">
-      <h3>{{contactList.name}}</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum adipiscing vestibulum sapien, in ultricies tellus dignissim eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-        <p> Praesent mollis dolor eros, vel facilisis nisi auctor ut. Cras id convallis ipsum. Mauris posuere, ligula ac sodales sollicitudin, risus sapien iaculis libero, ac molestie orci arcu non ante. Fusce est leo, ornare ut porta quis, dictum et mi. Aliquam vel pretium sem</p>
+    <div class="col-md-6 contact_left">
+      <h3>Конакти</h3>
+      <p>Художній керівник народного ансамблю пісні і танцю:</p>
+      <p class="head">{{contactList[0].name}}</p>
+        <p>Тел.: {{contactList[0].headTelephone}} Е-mail:<b> {{contactList[0].headEmail}}</b></p>
+        <p class="addr">Поштова адреса: {{contactList[0].headAddress}}</p>
+        <p>{{contactList[0].street}}</p>
+        <p class="some-text">Народний ансамбль пісні і танцю "ЧЕРЕМОШ" </p>
+        <p>{{contactList[0].phone}}</p>
+        <p>{{contactList[0].fax}}</p>
     </div>
-    <div class="col-md-8 contact_right">
-      <h3>Catch me</h3>
+    <div class="col-md-6 contact_right">
+      <h3>Залиште ваше повідомлення</h3>
       <form>
         <div class="text">
           <div class="text-fild">
-            <span>Name:</span>
-            <input type="text" class="text" value="Your Name here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name here';}">
+            <span>Ваше імя:</span>
+            <input type="text" class="text" value="Ваше імя" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name here';}">
           </div>
           <div class="text-fild">
-            <span>Email:</span>
-            <input type="text" class="text" value="Your Email here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email here';}">
+            <span>Ваш E-mail:</span>
+            <input type="text" class="text" value="Ваш E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email here';}">
           </div>
           <div class="clearfix"> </div>
         </div>
-        <div class="msg-fild">
-            <span>Subject:</span>
-            <input type="text" class="text" value="Your Subject here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Subject here';}">
-        </div>
         <div class="message-fild">
-            <span>Message:</span>
+            <span>Ваше повідомлення:</span>
             <textarea> </textarea>
         </div>
-        <div class="description"><a href="#">Send</a></div>
+        <div class="description"><a href="#">Відправити</a></div>
       </form>
     </div>
     <div class="clearfix"> </div>

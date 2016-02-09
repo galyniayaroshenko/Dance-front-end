@@ -88,7 +88,7 @@ angular.module('myApp')
       views: {
         'main@base': {
           templateUrl: 'templates/songs.html',
-          controller: 'MusicListController'
+          controller: 'SongsListController'
         }
       }
     })
@@ -97,7 +97,7 @@ angular.module('myApp')
       views: {
         'main@base': {
           templateUrl: 'templates/songs-view.html',
-          controller: 'MusicViewController'
+          controller: 'SongsViewController'
         }
       }
     })
@@ -106,8 +106,17 @@ angular.module('myApp')
       url: '/music',
       views: {
         'main@base': {
-          templateUrl: 'templates/music.html'
-          //controller: 'MusicCreateController'
+          templateUrl: 'templates/music.html',
+          controller: 'MusicListController'
+        }
+      }
+    })
+    .state('base.musicView', {
+      url: '/music/:id',
+      views: {
+        'main@base': {
+          templateUrl: 'templates/music-view.html',
+          controller: 'MusicViewController'
         }
       }
     })

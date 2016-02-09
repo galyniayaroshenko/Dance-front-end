@@ -3,7 +3,7 @@ angular.module('myApp')
   //$scope.musicList = Music.get();
   $scope.contactList = Contact.get(function(data){
     $scope.contactList = data.results;
-    console.log($scope.contactList);
+    console.log('cont', $scope.contactList);
     });
 console.log("smile");
 }]);
