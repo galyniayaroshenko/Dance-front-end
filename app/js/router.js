@@ -92,15 +92,15 @@ angular.module('myApp')
         }
       }
     })
-    .state('base.songsView', {
-      url: '/songs/:id',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/songs-view.html',
-          controller: 'SongsViewController'
-        }
-      }
-    })
+    // .state('base.songsView', {
+    //   url: '/songs/:id',
+    //   views: {
+    //     'main@base': {
+    //       templateUrl: 'templates/songs-view.html',
+    //       controller: 'SongsViewController'
+    //     }
+    //   }
+    // })
 
     .state('base.music', {
       url: '/music',

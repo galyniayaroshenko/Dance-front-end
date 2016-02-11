@@ -305,12 +305,15 @@ li {
   border: none;
   background: transparent;
 }
-.icon-pause2, .icon-play3,  .icon-stop2 {
+.inner-palay {
+  border-bottom: #666 1px solid;
+}
+.icon-pause2, .icon-play3,  .icon-stop2, .icon-previous2, .icon-next2 {
   color: #333;
   font-size: 20px;
 }
-.icon-stop2 {
-  padding-right: 20px;
+.icon-next2 {
+  padding-right: 25px;
 }
 .icon-loop2{
   color: #666;
@@ -347,3 +350,22 @@ li {
 .wrap-title {
   padding: 0;
 }
+.view-ol {
+	 list-style-type:upper-roman;
+	 margin-top: 15px;
+ }
+ .view-ol li {
+	 display: block;
+	 width: 97%;
+	 padding: 3px 0 3px 25px;
+
+ }
+ .view-ol li:nth-child(2n+1) {
+	 background: #fff;
+ }
+ .view-ol li:nth-child(2n) {
+	 background: #fafafa;
+ }
+ .view-ol li:hover {
+	  background: #e6e6e6;
+ }

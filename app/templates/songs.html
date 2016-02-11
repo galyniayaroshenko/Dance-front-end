@@ -1,3 +1,9 @@
+<!-- <script>
+  $(document).ready(function() {
+
+  });
+</script> -->
+
 <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <div class="container center-inside-content">
             <div class="row">
@@ -8,7 +14,7 @@
             </div>
             <div class="al-wrapper-albums">
             <div class="row padding-video">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="musics in musicList">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" ng-repeat="musics in musicList">
                 <div class="al-some-albums">
                   <a ui-sref="base.viewAlbums({id:albums._id})"><img class="al-img" src="{{musics.img.url}}"></a>
                   <h5 class="al-name-albums">{{musics.title}}</h5>
@@ -95,6 +101,61 @@
                           </ul>
                       </div>
                   </div>
+
+
+                  <div class="container inner-palay ">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper-button">
+                        <!-- <div class="wrapper-button"> -->
+                        	<button play-music><span class="icon-previous2"></span></button>
+                          <button pause-music><span class="icon-pause2"></span></button>
+                          <button play-music foo><span class="icon-play3"></span></button>
+                          <button play-music><span class="icon-next2"></span></button>
+
+                          <!-- <button stop-music><span class="icon-stop2"></span></button> -->
+                          <button repeat-music><span class="icon-loop2"></span></button>
+                        <!-- </div> -->
+                      </div>
+                      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 wrap-pad">
+                        <div class="row">
+                          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                            <div class="seekBase" seek-track>
+                                <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <button music-volume data-type="increase"><span class="icon-volume-increase "></span></button>
+                            <button music-volume data-type="decrease"><span class="icon-volume-decrease "></span></button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <img src="img/photo.jpg" class="img-play"/>
+                          </div>
+                          <div class="col-md-7 wrap-title">
+                            <div class="title">Грає ваш </div>
+                            <div class="title-music">gththtyhtyh</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container inner-palay ">
+                    <div class="row">
+                  <ol class="view-ol">
+             <li ng-repeat="song in songs">
+               <button music-player add-song="song" class="view-add">+</button><button music-player="play" add-song="song" class="view-song">{{ song.title }}</button>
+             </li>
+
+          </ol>
+        </div>
+      </div>
+
+
+
 
 
 
