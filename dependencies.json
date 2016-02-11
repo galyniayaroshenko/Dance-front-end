@@ -13,6 +13,7 @@
     "./app/libs/waypoints/waypoints.min.js",
     "./app/libs/animate/animate-css.js",
     "./app/libs/owl/owl.carousel.min.js",
+    "./app/libs/angular-soundmanager2/angular-soundmanager2.js",
     "./app/libs/jqBootstrapValidation/jqBootstrapValidation.js"
       ]
 }

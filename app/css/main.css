@@ -19,7 +19,7 @@ body textarea:required:valid {
   display: none; }
 
 .main_color_bg {
-  background-image: url(../img/bg1.jpg);
+  background-image: url(../img/bg2.jpg);
   max-height: 400px; }
 
 section,
@@ -421,7 +421,8 @@ svg path {
     margin-bottom: 0px;
     font-size: 14px; }
   .contact_box .contacts_icon {
-    font-size: 30px; }
+    font-size: 30px;
+    padding-bottom: 10px; }
   .contact_box p {
     margin-top: 5px;
     margin-right: 10px; }
@@ -506,7 +507,8 @@ svg path {
       font-size: 14px;
       color: #6E7B8B; }
     .slider .slide p {
-      margin-top: 18px; }
+      margin-top: 18px;
+      margin-bottom: 30px; }
   .slider .owl-controls {
     text-align: center; }
     .slider .owl-controls .owl-dot {

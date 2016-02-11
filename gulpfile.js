@@ -64,13 +64,10 @@ gulp.task('fonts', function() {
             .pipe(gulp.dest('./build/libs/'));
 });
 
-// gulp.task('fonts', function() {
-//     return gulp.src(['./app/font-awesome/font-awesome/css/font-awesome.min.css',
-//                     './app/font-awesome/font-awesome/fonts/fontawesome-webfont.*',
-//                     './app/font-awesome/linea/fonts/linea-basic-10.*',
-//                     './app/font-awesome/linea/styles.css'])
-//             .pipe(gulp.dest('./build/font-awesome/'));
-// });
+gulp.task('fontsF', function() {
+    return gulp.src('./app/css/fonts/**/*.*')
+    .pipe(gulp.dest('./build/css/fonts/'));
+});
 
 gulp.task('templates', function() {
   return gulp.src('./app/index.html')
@@ -109,4 +106,4 @@ gulp.task('watch', ['cssConcat'], function () {
   gulp.watch('./app/index.html', ['templates']);
 });
 
-gulp.task('default', ['jsUglify', 'imageMin', 'webserver', 'fonts', 'templates', 'templatesDirect', 'styles', 'buildLib', 'watch', 'cssConcat']);
+gulp.task('default', ['jsUglify', 'imageMin', 'webserver', 'fonts', 'fontsF', 'templates', 'templatesDirect', 'styles', 'buildLib', 'watch', 'cssConcat']);

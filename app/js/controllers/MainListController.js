@@ -14,9 +14,6 @@ angular.module('myApp')
     for (var i = 0; i < $scope.aboutUsList.length; i++) {
       $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,700);
     }
-    // $(document).ready(function() {
-    //   $(".popup").magnificPopup({type:"image"});
-    // });
     });
 
 
