@@ -5,11 +5,25 @@ angular.module('myApp')
   //$scope.musicList = Music.get();
   Category.get(function(data) {
     $scope.category = data.results;
-    console.log($scope.category);
-  })
+    //console.log('cate', $scope.category);
+    //console.log('c', $scope.category.length);
+    $scope.cat = [];
+    for (var i = $scope.category.length - 1; i > ($scope.category.length - ( $scope.category.length - 9)); i--) {
+      $scope.cat.push($scope.category[i]);
+      //console.log($scope.category[i]);
+      //$scope.cat = $scope.category[i];
+      //console.log('f', $scope.cat);
+      //console.log('fas', $scope.cat.name);
+      //console.log(i);
+      //console.log('zxc', $scope.cat);
+    //console.log('sa', $scope.category[i]);
+
+    }
+   //console.log('zxc', $scope.cat);
+  });
  AboutUs.get(function(data){
     $scope.aboutUsList = data.results;
-    console.log('AboutUs', $scope.aboutUsList);
+    //console.log('AboutUs', $scope.aboutUsList);
 
     for (var i = 0; i < $scope.aboutUsList.length; i++) {
       $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,700);
@@ -36,14 +50,14 @@ angular.module('myApp')
             });
           });
         }, 5000);
-
     }
+
     });
 
 
  PeopleEffort.get(function(data){
     $scope.peopleEffortList = data.results;
-    console.log('PeopleEffort', $scope.peopleEffortList);
+    //console.log('PeopleEffort', $scope.peopleEffortList);
     $(document).ready(function() {
     $("#owl-demo").owlCarousel({
     items : 1,
@@ -60,20 +74,20 @@ angular.module('myApp')
     dragEndSpeed : 600
   });
   function customDataSuccess(data){
-    console.log('data', data);
+  //  console.log('data', data);
     var content = "";
     for(var i in data){
 
       var foto = data[i].foto.url;
       var name = data[i].name;
-      console.log('f', foto);
-      console.log('m', name);
+    //  console.log('f', foto);
+      //console.log('m', name);
       var profession = data[i].profession;
       var description = data[i].description;
 
       content += "<div><div class='img-wrap'><img src= "+foto+"></div><h3>"+name+"</h3><div class='slide-descr'>"+profession+"</div><p>"+description+"</p></div>"
-console.log('c', content);
-      console.log('i', i);
+//console.log('c', content);
+      //console.log('i', i);
     }
     $("#owl-demo").html(content);
   };
@@ -81,7 +95,7 @@ console.log('c', content);
     });
   Contact.get(function(data){
     $scope.contactList = data.results;
-    console.log('Contact', $scope.contactList);
+    //console.log('Contact', $scope.contactList);
 
     });
 

@@ -3,15 +3,14 @@
     <h1 class="rk-logo"><a href="index.html">Портфоліо<sup>cheremosh</sup></a></h1>
     <nav class="rk-navigation">
       <ul class="rk-menu">
-        <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">2009</a>
+        <li class="active rk-menu__item" ng-repeat="years in year" ng-mouseover="setCategory(years.objectId)"><a href="portfolio.html" class="rk-menu__link">{{years.year}}</a>
           <nav class="rk-menu__sub">
             <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Рахів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Львів Україна</a></li>
+              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link"></a></li>
             </ul>
           </nav>
         </li>
-        <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2010</a>
+        <!-- <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2010</a>
           <nav class="rk-menu__sub">
             <ul class="rk-container">
               <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Трускавець Україна</a></li>
@@ -66,7 +65,7 @@
               <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Цешин Польща</a></li>
             </ul>
           </nav>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </div>
