@@ -2,11 +2,11 @@
   "dependencies": [
     "./app/libs/jquery/jquery-2.1.3.min.js",
     "./node_modules/angular/angular.js",
-      "./app/libs/angular-soundmanager2/angular-soundmanager2.min.js",
+    "./node_modules/angular-ui-router/release/angular-ui-router.js",
+    "./app/libs/angular-soundmanager2/angular-soundmanager2.min.js",
     "./node_modules/angular-resource/angular-resource.js",
     "./node_modules/ng-storage/ngStorage.js",
     "./app/libs/angular-parallax/angular-parallax.js",
-    "./node_modules/angular-ui-router/build/angular-ui-router.js",
     "./app/libs/parallax/parallax.min.js",
     "./app/libs/magnific-popup/jquery.magnific-popup.min.js",
     "./app/libs/mixitup/mixitup.min.js",
