@@ -1,0 +1,26 @@
+.seekBase {
+  height: 23px;
+  width: 90%;
+  border: 1px solid #cccccc;
+}
+.seekLoad {
+  /*float: left;*/
+	height: 23px;
+  width: 0;
+  background-color: #E7EAF8;
+}
+.num-right {
+  float: left;
+  margin-left: -50px;
+}
+.but-right {
+  float: right;
+}
+li {
+	cursor: pointer;
+}
+.h5 {
+  padding-left: 50px;
+  color: #333;
+  font-size: 20px;
+}

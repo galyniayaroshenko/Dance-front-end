@@ -1,161 +1,95 @@
 <header class="ae-container-fluid ae-container-fluid--full rk-header ">
-      <div class="container center-inside-content">
-            <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="al-name-select">Пісні з виступів Черемоша <span>:</span></div>
-                <div class="al-line"></div>
-              </div>
-            </div>
-            <div class="al-wrapper-albums">
-            <div class="row padding-video">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" ng-repeat="musics in musicList">
-                <div class="al-some-albums">
-                  <a ui-sref="base.viewAlbums({id:albums._id})"><img class="al-img" src="{{musics.img.url}}"></a>
-                  <h5 class="al-name-albums">{{musics.title}}</h5>
-                  <p class="al-some-text">{{musics.description}}</p>
-                  <button class="al-btn-add"><a ui-sref="base.songsView({id:musics.objectId})" class="button_song">Слухати</a></button>
-
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-
+    <div class="container center-inside-content">
           <div class="row">
-                      <div class="col-md-12">
-
-                          <h5>Songs</h5>
-                          <ul>
-                              <li ng-repeat="song in songs">
-                                  <button music-player="play" add-song="song">{{ song.title }}</button>
-                                  <button music-player add-song="song">+</button>
-                              </li>
-                          </ul>
-
-                          <button play-all="songs">Play all</button>
-                          <button play-all="songs" data-play="false">Add all</button>
-
-                      </div>
-                  </div>
-
-                  <hr />
-
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="al-name-select">Пісні з виступів Черемоша <span>:</span></div>
+              <div class="al-line"></div>
+            </div>
+          </div>
+          <div class="al-wrapper-albums">
+          <div class="row padding-video">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" ng-repeat="song in songs">
+              <div class="al-some-albums">
+                <a ui-sref="base.viewAlbums({id:albums._id})"> <img class="al-img" src="{{song.img}}"></a>
+                <h5 class="al-name-albums" music-player="play" add-song="song">{{song.title}}</h5>
+                <p class="al-some-text">{{song.description}}</p>
+                <button class="al-btn-add button_song" music-player="play" add-song="song">Слухати</button>
+                <button class="al-btn-add-add" music-player add-song="song">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+                <div class="container inner-palay ">
                   <div class="row">
-                      <div class="col-md-12">
-                          <!-- init soundManager2 player -->
-                          <sound-manager></sound-manager>
-
-                          <p>
-                              Currently Playing: {{ currentPlaying.title }} by {{ currentPlaying.artist }} ({{ currentPostion }} / {{ currentDuration }})
-                          </p>
-
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper-button">
+                      <sound-manager></sound-manager>
+                      	<button prev-track><span class="icon-previous2"></span></button>
+                        <button pause-music><span class="icon-pause2"></span></button>
+                        <button play-music><span class="icon-play3"></span></button>
+                        <button next-track><span class="icon-next2"></span></button>
+                        <button repeat-music><span class="icon-loop2"></span></button>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 wrap-pad">
+                      <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                           <div class="seekBase" seek-track>
                               <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
                           </div>
-                          <br />
-                          <button play-music>Play</button>
-                          -
-                          <button pause-music>Pause</button>
-                          -
-                          <button stop-music>Stop</button>
-                          -
-                          <button repeat-music>Repeat ({{ repeat }})</button>
-                          -
-                          <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button>
-
-                          Is Playing: {{ isPlaying }}
-                          <br/>
-                          <br/>Volume: {{ volume }} -
-                          <button music-volume data-type="increase">+</button>
-                          -
-                          <button music-volume data-type="decrease">-</button>
-                          -
-                          <button mute-music>Mute ({{ mute }})</button>
-                          <br/>
-                          <br/>
-                          <button prev-track>Prev Track</button>
-                          -
-                          <button next-track>Next Track</button>
-                          -
-                          <button clear-playlist>Clear Playlist</button>
-                          <br/>
-                          <br/>
-                          <h5>Playlist</h5>
-                          <ul>
-                              <li ng-repeat="song in playlist">
-                                  <a play-from-playlist="song">{{ song.title }}</a>
-                                  -
-                                  <a remove-from-playlist="song" data-index="{{$index}}">
-                                      <small>(remove)</small>
-                                  </a>
-                                  <span ng-if="currentPlaying.id == song.id"> - (current)</span>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-
-
-                  <div class="container inner-palay ">
-                    <div class="row">
-                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 wrapper-button">
-                        <!-- <div class="wrapper-button"> -->
-                        	<button play-music><span class="icon-previous2"></span></button>
-                          <button pause-music><span class="icon-pause2"></span></button>
-                          <button play-music foo><span class="icon-play3"></span></button>
-                          <button play-music><span class="icon-next2"></span></button>
-
-                          <!-- <button stop-music><span class="icon-stop2"></span></button> -->
-                          <button repeat-music><span class="icon-loop2"></span></button>
-                        <!-- </div> -->
-                      </div>
-                      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 wrap-pad">
-                        <div class="row">
-                          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                            <div class="seekBase" seek-track>
-                                <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                          <div class="num-right">{{ currentPostion }} / {{ currentDuration }}</div>
+                          <div class="but-right">
                             <button music-volume data-type="increase"><span class="icon-volume-increase "></span></button>
                             <button music-volume data-type="decrease"><span class="icon-volume-decrease "></span></button>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div class="row">
-                          <div class="col-md-3">
-                            <img src="img/photo.jpg" class="img-play"/>
-                          </div>
-                          <div class="col-md-7 wrap-title">
-                            <div class="title">Грає ваш </div>
-                            <div class="title-music">gththtyhtyh</div>
-                          </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <div class="row" ng-repeat="song in playlist">
+                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+                          <img src="{{song.img}}" class="img-play"/>
+                        </div>
+                        <div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 wrap-title">
+                          <div class="title">Грає поточна пісня:</div>
+                          <div class="title-music">{{song.title}}</div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="container inner-palay ">
-                    <div class="row">
-                  <ol class="view-ol">
-             <li ng-repeat="song in songs">
-               <button music-player add-song="song">+</button><button music-player="play" add-song="song" class="view-song">{{ song.title }}</button>
-             </li>
-
-          </ol>
-        </div>
+                <div class="container inner-palay ">
+                  <div class="row">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+                          <p class="h5">Playlist</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+                          <button play-all="songs"  class="h5" data-play="false">Add all</button>
+                        </div>
+                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+                          <button play-all="songs"  class="h5">Play all</button>
+                        </div>
+                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+                          <button clear-playlist  class="h5">Clear Playlist</button>
+                        </div>
+                      </div>
+                    </div>
+                    <ol class="view-ol">
+                        <li ng-repeat="song in playlist">
+                            <a play-from-playlist="song">{{ song.title }}</a>
+                            -
+                            <a remove-from-playlist="song" data-index="{{$index}}">
+                                <small>(remove)</small>
+                            </a>
+                            <span ng-if="currentPlaying.id == song.id"> - (current)</span>
+                        </li>
+                    </ol>
       </div>
-
-
-
-
-
-
-
-
-      </div>
+    </div>
+    </div>
 
 
 <header>

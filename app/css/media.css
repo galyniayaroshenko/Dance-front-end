@@ -10,7 +10,7 @@
 	.personal_last_block {
 		margin-top: 35px;
 	}
-	
+
 }
 
 /* Small Devices, Tablets */
@@ -23,6 +23,16 @@
 	}
 	.resume_container .left h3 {
 		margin-top: 0;
+	}
+	.num-right {
+		padding-left: 33px;
+	}
+	.icon-next2 {
+		padding-right: 35px;
+	}
+	.h5 {
+		padding-left: 35px;
+    font-size: 15px;
 	}
 
 }

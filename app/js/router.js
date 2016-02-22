@@ -74,15 +74,6 @@ angular.module('myApp')
         }
       }
     })
-    .state('base.videoView', {
-      url: '/video/:id',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/video-view.html',
-          controller: 'VideoViewController'
-        }
-      }
-    })
     .state('base.songs', {
       url: '/songs',
       views: {
