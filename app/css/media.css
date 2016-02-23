@@ -10,6 +10,36 @@
 	.personal_last_block {
 		margin-top: 35px;
 	}
+	.num-right {
+		/*padding-left: 33px;*/
+		margin-left: -35px!important;
+	}
+	.icon-next2 {
+		padding-right: 35px;
+	}
+	.h5 {
+		padding-left: 35px!important;
+    font-size: 15px!important;
+	}
+	/*.seekBase {
+		margin-left: -45px;
+	}*/
+	.img-play {
+		margin-top: 12px!important;
+	}
+	.title {
+		margin-top: 10px;
+	}
+	.but-right {
+		margin-left: -12px;
+		float: left!important;
+	}
+	.icon-next2 {
+    padding-right: 34px!important;
+	}
+	.seekBase {
+		margin-left: -45px;
+	}
 
 }
 
@@ -24,15 +54,37 @@
 	.resume_container .left h3 {
 		margin-top: 0;
 	}
-	.num-right {
-		padding-left: 33px;
+	.wrapper-button {
+		display: inline-block;
+		text-align: center;
+	}
+ .but-right{
+	 float: right!important;
+ }
+ .xs-hidden {
+	 display: none;
+ }
+ .wrap-pad {
+	 padding-bottom: 10px;
+ }
+ .h5 {
+	 padding-left: 25px!important;
+		font-size: 13px!important;
+ }
+ .seekBase {
+	 margin-left: 0px;
+ }
+}
+@media (max-width: 640px) {
+	.wrapper-button {
+		display: inline-block;
+		text-align: center;
 	}
 	.icon-next2 {
-		padding-right: 35px;
+    padding-right: 0px!important;
 	}
-	.h5 {
-		padding-left: 35px;
-    font-size: 15px;
+	.num-hide {
+		display: none;
 	}
 
 }
@@ -55,6 +107,10 @@
 	.main_footer .social_wrap ul {
 		padding-left: 0;
 	}
+	.but-right {
+		margin-left: -33px;
+	}
+
 }
 
 /* Custom, iPhone Retina */
