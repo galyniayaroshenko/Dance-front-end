@@ -9,7 +9,7 @@
       </div>
       <div class="al-wrapper-albums">
       <div class="row padding-video">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" ng-repeat="video in videoList">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" ng-repeat="video in videoList">
           <div class="al-some-albums" style="wigth=150px">
             <div class="videoWrapper"><div ng-bind-html="video.video" class="video-limit"></div></div>
                 <a ui-sref="base.videoView({id:video.objectId})"><h5 class="al-name-albums">{{video.name}}</h5></a>

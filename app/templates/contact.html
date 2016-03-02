@@ -18,23 +18,23 @@
     </div>
     <div class="col-md-6 contact_right">
       <h3>Залиште ваше повідомлення</h3>
-      <form>
+      <form action="http://formspree.io/yaroshenko270@gmail.com" method="post" target="_blank">
         <div class="text">
           <div class="text-fild">
             <span>Ваше імя:</span>
-            <input type="text" class="text" value="Ваше імя" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name here';}">
+            <input type="text" class="text" name="name" placeholder="Ваше імя" data-validation-required-message="Ви не ввели ім'я" required>
           </div>
           <div class="text-fild">
             <span>Ваш E-mail:</span>
-            <input type="text" class="text" value="Ваш E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email here';}">
+            <input type="email" name="email" style="padding: 12px 20px; border: 1px solid #DAD8D8; " placeholder="Ваш E-mail" data-validation-required-message="Не коректно ввели E-mail" required class="text">
           </div>
           <div class="clearfix"> </div>
         </div>
         <div class="message-fild">
             <span>Ваше повідомлення:</span>
-            <textarea> </textarea>
+            <textarea name="message"data-validation-required-message="Ви не ввели повідомлення" required> </textarea>
         </div>
-        <div class="description"><a href="#">Відправити</a></div>
+        <button class="description bor_b">Відправити</button>
       </form>
     </div>
     <div class="clearfix"> </div>

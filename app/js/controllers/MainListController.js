@@ -13,7 +13,7 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, PeopleEffort, Contact,
   AboutUs.get(function(data){
     $scope.aboutUsList = data.results;
     for (var i = 0; i < $scope.aboutUsList.length; i++) {
-      $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,700);
+      $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,400);
     }
   });
 

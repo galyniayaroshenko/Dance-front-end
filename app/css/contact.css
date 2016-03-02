@@ -58,3 +58,11 @@
 a:hover, a:focus {
 	text-decoration:none !important;
 }
+.bor_b {
+	border: 0;
+	padding: 10px 15px!important;
+	font-size: 16px;
+}
+.bor_b:hover {
+	color: #000;
+}
