@@ -8,8 +8,7 @@ angular.module('myApp')
       '$q', '$location', '$localStorage',
       function ($q, $location, $localStorage) {
         return {
-          request: function (config) {
-
+          request: function (config) { 
               config.headers['X-Parse-Application-Id'] = 'H5KAAYxtQs9mHofpMrAMR79g4fRB8gVi8u1L0WD8';
               config.headers['X-Parse-REST-API-Key'] = 'whotVlXPedvga8enyrfzWdywrBgL024TynNQiYH9';
             return config;

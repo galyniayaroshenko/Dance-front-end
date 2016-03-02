@@ -1,0 +1,14 @@
+.language li {
+  color: #fff;
+  list-style-type: none;
+  display: block;
+  padding: 15px;
+  font-size: 24px;
+  float: left;
+}
+.language li:hover,  .language li:focus {
+  text-decoration: underline;
+}
+.language .active {
+  text-decoration: underline;
+}

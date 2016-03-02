@@ -1,6 +1,8 @@
+
+
 angular.module('myApp')
-.controller('PortfolioListController', ['Year', 'Category', '$scope', '$state', '$window', 'Portfolio', '$http',
-  function(Year, Category, $scope, $state, $window, Portfolio, $http) {
+.controller('PortfolioListController', ['Year', 'Category', '$stateParams', '$scope', '$state', '$window', 'Portfolio', '$http',
+  function(Year, Category, $stateParams, $scope, $state, $window, Portfolio, $http) {
 
     Category.get(function(data) {
       $scope.category = data.results;
@@ -13,12 +15,36 @@ angular.module('myApp')
     })
 
   Portfolio.get(function(data){
-    $scope.portfolioList = data.results;
-    console.log('port', $scope.portfolioList);
+    $scope.sortPortfolio = data.results;
+    console.log('port', $scope.sortPortfolio);
     });
 
+    $scope.setPortfolio = function (yearId, countryId) {
+      console.log("yearId",yearId);
+      console.log("countryId",countryId);
+      $http({
+          method: 'GET',
+          url: 'https://api.parse.com/1/classes/Portholio',
+          params: {
+              where: {year:{__type:"Pointer",className:"year",objectId:yearId}, category:{__type:"Pointer",className:"category",objectId:countryId}}
+          }
+        }).then(function(result) {
+          $scope.sortPortfolio = result.data.results;
+          console.log("Portfolio is sort",$scope.sortPortfolio);
 
+      });
+    }
+    function Unique(A) {
+         var n = A.length, k = 0, B = [];
+         for (var i = 0; i < n; i++)
+          { var j = 0;
+            while (j < k && B[j] !== A[i]) j++;
+            if (j == k) B[k++] = A[i];
+          }
+         return B;
+     }
     $scope.setCategory = function(objectId) {
+      var items2 = $scope.items2 = []
       console.log("Galyunya",objectId);
       function CatReturn(objectId) {
         return {
@@ -36,7 +62,7 @@ angular.module('myApp')
           //console.log(result);
 
          var items1 = $scope.items1 = [];
-         var data;
+        //  var items2 = $scope.items2 = []
          $scope.cat = result.data.results;
          console.log("rrr", $scope.cat);
           angular.forEach(result.data.results, function(item, index){
@@ -44,73 +70,39 @@ angular.module('myApp')
              console.log("id", items1[index].category.objectId);
 
              $http(CatReturn(items1[index].category.objectId)).success(function(resp) {
-               $scope.items2 = [];
-               angular.extend(data, resp);
-              //  $scope.items2[0] = resp;
-              console.log(resp);
-               //$scope.catt = resp;
-               //console.log("mmm", $scope.catt);
-                $scope.items2.push(resp);
-               console.log('item2',  $scope.item2);
+               console.log("index", index);
+               items2[index] = resp;
+               console.log('le', items2.length);
+               Unique(items2);
 
-              //  angular.forEach(result.data.results, function(item, index){
-              //    items2[index] = item;
-              //  });
 
+               //console.log('z', items2[index].objectId);
+              //  for(var s = 1; s <= index; s++){
+              //    if (items2.length){
+              //       var category = items2[0];
+              //       if (category === items2[s]) {
+              //          items2[s+1] = '';
+              //        console.log('true');
+              //       } else {
+              //         items2[s] = items2[s];
+              //         items2[s+1] = items2[s+1];
+              //         console.log('false');
+              //       }
+              //    } else {
+               //
+              //    }
+               //
+               //
+               //
+              //  }
+
+               console.log(resp);
+               console.log('item2',  items2);
              });
+             console.log(items2.length);
+             console.log('Галюня кіцюня',items2);
           });
-
-        // $scope.catPorfolio = result.data.results;
-        // console.log($scope.catPorfolio);
       });
-
-      // Portfolio.get(function(data){
-      //   $scope.portfolioList = data.results;
-      //   console.log('Galyuya Galyuya', $scope.portfolioList);
-      //   });
-        // var items1 = $scope.items1 = [];
-        // var items2 = $scope.items2 = [];
-        // $http.get({
-        //     method: 'GET',
-        //     url: 'https://api.parse.com/1/classes/Portholio',
-        //     params: {
-        //         where: {category:{__type:"Pointer",className:"category",objectId:"PaL9QAoB3V"}}
-        //     }
-        //   }).then(function(result) {
-        //   $scope.catPorfolio = result.data.results;
-        //   console.log($scope.catPorfolio);
-            // angular.forEach(result.data.results, function(item, index){
-            //     items1[index] = item;
-            //     items1[index].prodano = 0;
-            //     items1[index].catalog = 0;
-            //     items1[index].vsi = 0;
-            //
-            //     $http(ArtistReturn(items1[index].objectId)).success(function(resp) {
-            //       angular.forEach(resp.results, function(item, index2){
-            //         items2[index2] = item;
-            //
-            //         if(items1[index].objectId == items2[index2].Artist.objectId)
-            //         {
-            //           items1[index].vsi = items1[index].vsi + 1;
-            //           if (items2[index2].artworkState == '1') {
-            //             items1[index].prodano = items1[index].prodano + 1;
-            //           } else if(items2[index2].artworkState == '0') {
-            //             items1[index].catalog = items1[index].catalog + 1;
-            //           }
-            //         }
-            //       });
-            //     });
-            // });
-        // });
-        // function setCat(objectId) {
-        //   return {
-        //       method: 'GET',
-        //       url: 'https://api.parse.com/1/classes/Portholio',
-        //       params: {
-        //           where: {category:{__type:"Pointer",className:"category",objectId:objectId}},
-        //       }
-        //   }
-        // }
     }
 
 

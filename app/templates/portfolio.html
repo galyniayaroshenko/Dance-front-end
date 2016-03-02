@@ -1,129 +1,30 @@
-<header class="ae-container-fluid ae-container-fluid--full rk-header ">
-  <div class="ae-container-fluid rk-topbar">
-    <h1 class="rk-logo"><a href="index.html">Портфоліо<sup>cheremosh</sup></a></h1>
-    <nav class="rk-navigation">
-      <ul class="rk-menu">
-        <li class="active rk-menu__item" ng-repeat="years in year" ng-mouseover="setCategory(years.objectId)"><a href="portfolio.html" class="rk-menu__link">{{years.year}}</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link"></a></li>
-            </ul>
-          </nav>
-        </li>
-        <!-- <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2010</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Трускавець Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Яворів Україна</a></li>
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Кошіце Словаччина</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Львів Україна</a></li>
-            </ul>
-          </nav>
-        </li>
-        <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2011</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Рахів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Кардіца Греція</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Львів Україна</a></li>
-            </ul>
-          </nav>
-        </li>
-        <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2012</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Рахів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Люблін Польща</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Львів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Олесько, Соколівка, Надвірна</a></li>
-            </ul>
-          </nav>
-        </li>
-        <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">2013</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Рахів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Ходорів україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Львів Україна</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Скоп'є Македонія</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Рейдова Словаччина</a></li>
-              <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Коломия Україна</a></li>
-            </ul>
-          </nav>
-        </li>
-        <li class="rk-menu__item"><a href="#0" class="rk-menu__link">2014</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Стамбул Турція</a></li>
-            </ul>
-          </nav>
-        </li>
-        <li class="rk-menu__item"><a href="#0" class="rk-menu__link">2015</a>
-          <nav class="rk-menu__sub">
-            <ul class="rk-container">
-              <li class="rk-menu__item"><a href="../index.html" class="rk-menu__link">Львів Україна</a></li>
-              <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Цешин Польща</a></li>
-            </ul>
-          </nav>
-        </li> -->
-      </ul>
-    </nav>
-  </div>
-</header>
-<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio rk-main">
-        <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4"><a href="templates/portfolio-item.html" class="rk-item ae-masonry__item"><img src="img/portfolio/project-1.jpg" alt="">
-            <div class="item-meta">
-              <h2>Essential Stationery</h2>
-              <p>Branding</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-2.jpg" alt="">
-            <div class="item-meta">
-              <h2>Pickled Tousled</h2>
-              <p>Art Direction</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-3.jpg" alt="">
-            <div class="item-meta">
-              <h2>Waistcoat vegan</h2>
-              <p>Graphic Design</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-4.jpg" alt="">
-            <div class="item-meta">
-              <h2>Tumblr hammock</h2>
-              <p>Packaging</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-5.jpg" alt="">
-            <div class="item-meta">
-              <h2>Biodiesel etsy</h2>
-              <p>Branding</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-6.jpg" alt="">
-            <div class="item-meta">
-              <h2>Gentrify artisan</h2>
-              <p>Graphic Design</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-7.jpg" alt="">
-            <div class="item-meta">
-              <h2>Plaid austin</h2>
-              <p>Graphic Design</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-8.jpg" alt="">
-            <div class="item-meta">
-              <h2>Trust fund</h2>
-              <p>Packaging</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-9.jpg" alt="">
-            <div class="item-meta">
-              <h2>Gentrify pork</h2>
-              <p>Branding</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-10.jpg" alt="">
-            <div class="item-meta">
-              <h2>Waistcoat ugh</h2>
-              <p>UI/UX</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-11.jpg" alt="">
-            <div class="item-meta">
-              <h2>Deep v kogi</h2>
-              <p>Graphic Design</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-12.jpg" alt="">
-            <div class="item-meta">
-              <h2>Venmo trust</h2>
-              <p>Packaging</p>
-            </div></a><a ui-sref="base.portfolioAlt" class="rk-item ae-masonry__item"><img src="img/portfolio/project-13.jpg" alt="">
-            <div class="item-meta">
-              <h2>Venmo trust</h2>
-              <p>Ui/UX</p>
-            </div></a>
-        </div>
-      </section>
-    </section>
+
+        <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+          <div class="ae-container-fluid rk-topbar">
+            <h1 class="rk-logo"><a href="index.html">Портфоліо<sup>cheremosh</sup></a></h1>
+            <nav class="rk-navigation">
+              <ul class="rk-menu">
+                <li class="active rk-menu__item" ng-repeat="years in year"><a ng-mouseover="setCategory(years.objectId)" href="" class="rk-menu__link">{{years.year}}</a>
+                  <nav class="rk-menu__sub">
+                    <ul class="rk-container">
+                      <li ng-repeat="category in items2" class="rk-menu__item"><a ng-click="setPortfolio(years.objectId, category.objectId)" href="" class="rk-menu__link">{{category.name }}</a></li>
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio rk-main">
+                <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+                  <a ng-repeat="portfolioSort in sortPortfolio" ui-sref="base.portfolioAlt({id:portfolioSort.objectId})" class="rk-item ae-masonry__item">
+                    <img src="{{portfolioSort.img.url}}" alt="">
+                    <div class="item-meta">
+                      <h2>{{portfolioSort.country}}</h2>
+                      <p>{{portfolioSort.country}}</p>
+                    </div>
+                  </a>
+
+                </div>
+              </section>
+            </section>
