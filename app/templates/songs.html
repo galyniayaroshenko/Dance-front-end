@@ -2,7 +2,7 @@
     <div class="container center-inside-content">
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="al-name-select">Пісні з виступів Черемоша <span>:</span></div>
+              <div class="al-name-select">{{list[0].song_about_setstion}}<span>:</span></div>
               <div class="al-line"></div>
             </div>
           </div>
@@ -13,7 +13,7 @@
                 <a ui-sref="base.viewAlbums({id:albums._id})"> <img class="al-img" src="{{song.img}}"></a>
                 <h5 class="al-name-albums" music-player="play" add-song="song">{{song.title}}</h5>
                 <p class="al-some-text">{{song.description}}</p>
-                <button class="al-btn-add button_song" music-player="play" add-song="song">Слухати</button>
+                <button class="al-btn-add button_song" music-player="play" add-song="song">{{list[0].Listen}}</button>
                 <button class="al-btn-add-add" music-player add-song="song">+</button>
               </div>
             </div>
@@ -51,7 +51,7 @@
                           <img src="{{song.img}}" class="img-play"/>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8  wrap-title">
-                          <div class="title">Грає поточна пісня:</div>
+                          <div class="title">{{list[0].Plays_the_current_song}}</div>
                           <div class="title-music">{{song.title}}</div>
                         </div>
                       </div>
@@ -64,16 +64,16 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                          <p class="h5">Playlist</p>
+                          <p class="h5">{{list[0].playlist}}</p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                          <button play-all="songs"  class="h5" data-play="false">Add all</button>
+                          <button play-all="songs"  class="h5" data-play="false">{{list[0].add_all}}</button>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                          <button play-all="songs"  class="h5">Play all</button>
+                          <button play-all="songs"  class="h5">{{list[0].play_all}}</button>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
-                          <button clear-playlist  class="h5">Clear Playlist</button>
+                          <button clear-playlist  class="h5">{{list[0].clear_playlist}}</button>
                         </div>
                       </div>
                     </div>
@@ -82,9 +82,9 @@
                             <a play-from-playlist="song">{{ song.title }}</a>
                             -
                             <a remove-from-playlist="song" data-index="{{$index}}">
-                                <small>(remove)</small>
+                                <small>(list[0].remove)</small>
                             </a>
-                            <span ng-if="currentPlaying.id == song.id"> - (current)</span>
+                            <span ng-if="currentPlaying.id == song.id"> - (list[0].current)</span>
                         </li>
                     </ol>
       </div>

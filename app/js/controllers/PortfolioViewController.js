@@ -1,6 +1,6 @@
 angular.module('myApp')
-  .controller('PortfolioViewController', ['$scope','$stateParams', 'Year', 'Category', 'Portfolio', '$http',
-    function($scope, $stateParams, Year, Category, Portfolio, $http) {
+  .controller('PortfolioViewController', ['$scope','$stateParams', 'Year', 'Category', 'Portfolio', '$http', '$rootScope',
+    function($scope, $stateParams, Year, Category, Portfolio, $http, $rootScope) {
     console.log($stateParams.id);
      Portfolio.get({ action: $stateParams.id }, function (data) {
       $scope.portfolio = data;

@@ -1,22 +1,13 @@
 <div class="grid_4">
   <div class="container">
-    <h1 class="blog_head">Blog</h1>
+    <h1 class="blog_head">{{list[0].s1_news}}</h1>
      <div class="blog_grid span2">
-       <div class="col-md-6 blog_box" ng-repeat="news in newsList">
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 blog_box" ng-repeat="news in newsList">
           <a ui-sref="base.newsView({id:news.objectId})" class="mask"><img ng-src="{{news.img.url}}" alt="image" class="img-responsive zoom-img" alt=""/></a>
-        <h3><a ui-sref="base.newsView">{{news.name}}</a></h3>
+        <h3><a ui-sref="base.newsView">{{news.languageName}}</a></h3>
         <p>{{news.description}}</p>
-          <div class="description"><a ui-sref="base.newsView({id:news.objectId})">Читати більше...</a></div>
+          <div class="description"><a ui-sref="base.newsView({id:news.objectId})">{{list[0].Read_more}}</a></div>
        </div>
-
      </div>
-     <!-- <div class="pagination">
-      <ul class="margin-top-b"><li class="pagination-start firstItem"><span class="pagenav">Start</span></li>
-        <li class="pagination-prev"><span class="pagenav">Prev</span></li><li>
-        <span class="pagenav">1</span></li><li><a href="#" class="pagenav">2</a></li>
-        <li class="pagination-next"><a title="" href="#" class="border pagenav" data-original-title="Next">Next</a></li>
-        <li class="pagination-end lastItem"><a title="" href="#" class="border pagenav" data-original-title="End">End</a></li>
-      </ul>
-    </div> -->
    </div>
 </div>

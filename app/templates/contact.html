@@ -1,40 +1,40 @@
 <div class="grid_4" id="contact">
 <div class="container">
-  <h1 class="blog_head">Конакти</h1>
+  <h1 class="blog_head">{{list[0].s1_contacts}}</h1>
     <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1142725182794!2d24.020006814970248!3d49.84031033902106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add717532da69%3A0xf0cb97b8441ff1fe!2z0LLRg9C7LiDQo9C90ZbQstC10YDRgdC40YLQtdGC0YHRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1453130267591" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
   <div class="contact">
     <div class="col-md-6 contact_left">
-      <h3>Конакти</h3>
-      <p>Художній керівник народного ансамблю пісні і танцю:</p>
+      <h3>{{list[0].s1_contacts}}</h3>
+      <p>{{list[0].artistic_director}}:</p>
       <p class="head">{{contactList[0].name}}</p>
-        <p>Тел.: {{contactList[0].headTelephone}} Е-mail:<b> {{contactList[0].headEmail}}</b></p>
-        <p class="addr">Поштова адреса: {{contactList[0].headAddress}}</p>
+        <p>{{list[0].PHONE}}: {{contactList[0].headTelephone}} {{list[0].Your_E_mail}}:<b> {{contactList[0].headEmail}}</b></p>
+        <p class="addr">{{contactList[0].mailing_address}}:</p>
         <p>{{contactList[0].street}}</p>
-        <p class="some-text">Народний ансамбль пісні і танцю "ЧЕРЕМОШ" </p>
-        <p>{{contactList[0].phone}}</p>
-        <p>{{contactList[0].fax}}</p>
+        <p class="some-text">{{list[0].national}}</p>
+        <p>{{list[0].PHONE}}: {{contactList[0].phone}}</p>
+        <p>{{list[0].fax}}: {{contactList[0].fax}}</p>
     </div>
     <div class="col-md-6 contact_right">
-      <h3>Залиште ваше повідомлення</h3>
+      <h3>{{list[0].s5_about_section}}</h3>
       <form action="http://formspree.io/yaroshenko270@gmail.com" method="post" target="_blank">
         <div class="text">
           <div class="text-fild">
-            <span>Ваше імя:</span>
-            <input type="text" class="text" name="name" placeholder="Ваше імя" data-validation-required-message="Ви не ввели ім'я" required>
+            <span>{{list[0].Your_name}}:</span>
+            <input type="text" class="text" name="name" placeholder="{{list[0].Your_name}}" data-validation-required-message="{{list[0].You_must_enter_your_name}}" required>
           </div>
           <div class="text-fild">
-            <span>Ваш E-mail:</span>
-            <input type="email" name="email" style="padding: 12px 20px; border: 1px solid #DAD8D8; " placeholder="Ваш E-mail" data-validation-required-message="Не коректно ввели E-mail" required class="text">
+            <span>{{list[0].Your_E_mail}}:</span>
+            <input type="email" name="email" class="text" style="padding: 12px 20px; border: 1px solid #DAD8D8; " placeholder="{{list[0].Your_E_mail}}" data-validation-required-message="{{list[0].Your_E_mail}}" required >
           </div>
           <div class="clearfix"> </div>
         </div>
         <div class="message-fild">
-            <span>Ваше повідомлення:</span>
-            <textarea name="message"data-validation-required-message="Ви не ввели повідомлення" required> </textarea>
+            <span>{{list[0].Your_message}}:</span>
+            <textarea name="message"data-validation-required-message="{{list[0].Incorrectly_entered_email}}" required> </textarea>
         </div>
-        <button class="description bor_b">Відправити</button>
+        <button class="description bor_b">{{list[0].button}}</button>
       </form>
     </div>
     <div class="clearfix"> </div>

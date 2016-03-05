@@ -16,9 +16,8 @@
   "main": "",
   "moduleType": [],
   "homepage": "",
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
+    "angular-translate": "^2.10.0"
   }
 }

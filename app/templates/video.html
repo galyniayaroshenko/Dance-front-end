@@ -3,16 +3,17 @@
 <div class="container center-inside-content">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="al-name-select">Відео з виступів Черемоша <span>:</span></div>
+          <div class="al-name-select">{{list[0].video_about_setstion}}<span>:</span></div>
           <div class="al-line"></div>
         </div>
       </div>
       <div class="al-wrapper-albums">
       <div class="row padding-video">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" ng-repeat="video in videoList">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="video in videoList">
           <div class="al-some-albums" style="wigth=150px">
             <div class="videoWrapper"><div ng-bind-html="video.video" class="video-limit"></div></div>
-                <a ui-sref="base.videoView({id:video.objectId})"><h5 class="al-name-albums">{{video.name}}</h5></a>
+                <a ui-sref="base.videoView({id:video.objectId})"><h5 class="al-name-albums">{{video.languageName}}</h5></a>
+                <p>{{video.descriptionLan}}</p>
           </div>
         </div>
     </div>

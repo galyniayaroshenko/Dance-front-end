@@ -14,9 +14,6 @@ angular.module('myApp')
         },
         'header@base': {
           templateUrl: 'templates/startPage/header.html'
-          //controller: 'ParallaxExampleCtrl'
-          //controller: 'ProfileController'
-          // controller: 'headerController'
         },
         'main@base': {
           templateUrl: 'templates/startPage/main.html',
@@ -128,6 +125,6 @@ angular.module('myApp')
         }
       }
     })
-    
+
     $urlRouterProvider.otherwise('/');
   }]);

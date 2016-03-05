@@ -1,11 +1,10 @@
 <div class="grid_4">
 		<div class="container">
-			<h1 class="blog_head">Blog</h1>
+			<h1 class="blog_head">{{list[0].s1_news}}</h1>
 		    <div class="blog_grid">
 		      <div class="blog_box">
 		        <a ui-sref="base.contactDescription" class="mask"><img src="{{news.img.url}}" alt="image" class="img-responsive zoom-img" alt=""/></a>
-		     	<h3><a ui-sref="base.contactDescription">{{news.name}}</a></h3>
-		     	<!-- <p>{{news.description}}</p> -->
+		     	<h3><a ui-sref="base.contactDescription">{{news.languageName}}</a></h3>
 					<div ng-bind-html="news.description1"></div>
 		     </div>
 		    </div>
