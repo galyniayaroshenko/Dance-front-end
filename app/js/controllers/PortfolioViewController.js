@@ -5,6 +5,22 @@ angular.module('myApp')
      Portfolio.get({ action: $stateParams.id }, function (data) {
       $scope.portfolio = data;
       console.log('portфів', $scope.portfolio);
+      $rootScope.$watch('arg', function() {
+          if ($rootScope.arg === "English"){
+            $scope.portfolio.languageDate = $scope.portfolio.date_en;
+            $scope.portfolio.languageTitle = $scope.portfolio.title_en;
+            $scope.portfolio.descriptionLan = $scope.portfolio.description_en;
+            $scope.portfolio.countryLan = $scope.portfolio.contry_en;
+            $scope.portfolio.cityLan = $scope.portfolio.city_en;
+          } else {
+            $scope.portfolio.languageDate = $scope.portfolio.date;
+            $scope.portfolio.languageTitle = $scope.portfolio.title;
+            $scope.portfolio.descriptionLan = $scope.portfolio.description;
+            $scope.portfolio.countryLan = $scope.portfolio.country;
+            $scope.portfolio.cityLan = $scope.portfolio.city;
+          }
+        console.log("!@#$$scope.portfolio", $scope.portfolio);
+      });
     });
     console.log('asd');
 
@@ -29,6 +45,17 @@ angular.module('myApp')
         $http(portfolioReturn($scope.portho.data.category.objectId)).success(function(resp) {
           $scope.catcat = resp;
           console.log('catcat', $scope.catcat);
+          $rootScope.$watch('arg', function() {
+              if ($rootScope.arg === "English"){
+                $scope.catcat.languageName = $scope.catcat.name_en;
+
+              } else {
+                $scope.catcat.languageName = $scope.catcat.name;
+
+              }
+
+            console.log("!@#$$scope.catcat", $scope.catcat);
+          });
         });
         $http(yearReturn($scope.portho.data.year.objectId)).success(function(res) {
           $scope.yearyear = res;

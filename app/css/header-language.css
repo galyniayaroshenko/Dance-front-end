@@ -6,10 +6,6 @@
   font-size: 24px;
   float: left;
 }
-.language li:hover,  .language li:focus {
-  text-decoration: underline;
-}
 .language .active {
   text-decoration: underline;
-   color:red;
 }

@@ -1,17 +1,9 @@
-<!-- <script>
-$(document).ready(function() {
-$(".language li").click(function() {
-  $(".language li").removeClass("active");
-  $(this).addClass("active");
-});
-  });
-</script> -->
 <header class="main_head main_color_bg"  parallax-background parallax-ratio="0.4" parallaxVerticalOffset="10" parallaxHorizontalOffset="10">
     <div class="row">
       <div class="col-md-12">
       <ul class="language">
-        <li ng-click="getLanguage('Ukraine')" >UK</li>
-        <li ng-click="getLanguage('English')" >USA</li>
+        <li ng-click="getLanguage('Ukraine')" ng-class="{ 'active': active('Ukraine') }">UK</li>
+        <li ng-click="getLanguage('English')" ng-class="{ 'active': active('English') }">USA</li>
       </ul>
       <button class="toggle_mnu" toggle-menu>
 

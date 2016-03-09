@@ -16,6 +16,8 @@ angular.module('myApp')
             $scope.category[i].nameLan = $scope.category[i].name;
           }
         }
+        console.log('!@#$%^&$scope.category', $scope.category);
+        console.log("!@$scope.category.nameLan", $scope.category[2].nameLan);
       });
     })
 

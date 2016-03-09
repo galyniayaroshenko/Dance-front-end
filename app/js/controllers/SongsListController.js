@@ -21,8 +21,9 @@ angular.module('myApp')
       }
       console.log('!@#musicList', $scope.musicList);
       console.log('$scope.musicList.length', $scope.musicList.length);
-
+      $scope.songs = [];
       for (var i = 0; i < $scope.musicList.length; i++) {
+
         $scope.songs.push({id: $scope.musicList[i].objectId,
           title: $scope.musicList[i].languageTitle,
           url: $scope.musicList[i].songs.url,

@@ -2,6 +2,16 @@ angular.module('myApp')
   .controller('MainLanguage', ['$scope','$state', '$rootScope', '$window', 'Language', '$http',
     function ($scope, $state, $rootScope, $window, Language, $http) {
       $rootScope.arg = "Ukraine";
+
+      $scope.currentActive = "Ukraine";
+      $scope.active = function(arg) {
+        return arg == $scope.currentActive;
+      }
+      // $scope.getLanguage = function(lang) {
+      //   $scope.currentActive = lang;
+      // }
+
+
       $http({
           method: 'GET',
           url: 'https://api.parse.com/1/classes/language',
@@ -16,6 +26,7 @@ angular.module('myApp')
 
       $scope.getLanguage = function (arg) {
         $rootScope.arg = arg;
+        $scope.currentActive = arg;
         console.log('arg', arg);
         console.log("asd");
 
