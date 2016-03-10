@@ -50,6 +50,7 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffo
 
         }
       }
+      console.log('!@#aboutUsList', $scope.aboutUsList[0].objectId);
     });
 
 

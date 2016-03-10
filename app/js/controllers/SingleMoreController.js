@@ -5,6 +5,6 @@ angular.module('myApp')
       console.log('AboutUsssss', data);
       $scope.viewAboutUs = data;
     });
-    console.log($scope.viewAboutUs);
+    console.log('$scope.viewAboutUs', $scope.viewAboutUs);
 
   }]);

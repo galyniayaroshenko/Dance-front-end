@@ -21,6 +21,8 @@ angular.module('myApp')
         }).then(function(result) {
           $scope.list = result.data.results;
           console.log("start language",$scope.list);
+
+          console.log("!@#remove", $scope.list[0].remove);
       });
 
 

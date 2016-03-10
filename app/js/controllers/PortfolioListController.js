@@ -8,17 +8,17 @@ angular.module('myApp')
       $scope.category = data.results;
       console.log('cat', $scope.category);
 
-      $rootScope.$watch('arg', function() {
-        for (var i = 0; i < $scope.category.length; i++) {
-          if ($rootScope.arg === "English"){
-            $scope.category[i].nameLan = $scope.category[i].name_en;
-          } else {
-            $scope.category[i].nameLan = $scope.category[i].name;
-          }
-        }
-        console.log('!@#$%^&$scope.category', $scope.category);
-        console.log("!@$scope.category.nameLan", $scope.category[2].nameLan);
-      });
+      // $rootScope.$watch('arg', function() {
+      //   for (var i = 0; i < $scope.category.length; i++) {
+      //     if ($rootScope.arg === "English"){
+      //       $scope.category[i].nameLan = $scope.category[i].name_en;
+      //     } else {
+      //       $scope.category[i].nameLan = $scope.category[i].name;
+      //     }
+      //   }
+      //   console.log('!@#$%^&$scope.category', $scope.category);
+      //   console.log("!@$scope.category.nameLan", $scope.category[2].nameLan);
+      // });
     })
 
     Year.get1(function(data) {
@@ -46,25 +46,25 @@ angular.module('myApp')
           $scope.sortPortfolio = result.data.results;
           console.log("Portfolio is sort",$scope.sortPortfolio);
 
-          $rootScope.$watch('arg', function() {
-            for (var i = 0; i < $scope.sortPortfolio.length; i++) {
-              if ($rootScope.arg === "English"){
-                $scope.sortPortfolio[i].languageName = $scope.sortPortfolio[i].country_en;
-                $scope.sortPortfolio[i].languageTitle = $scope.sortPortfolio[i].city_en;
-                $scope.sortPortfolio[i].description = $scope.sortPortfolio[i].description_en;
-                $scope.sortPortfolio[i].country = $scope.sortPortfolio[i].date_en;
-                $scope.sortPortfolio[i].city = $scope.sortPortfolio[i].title_en;
-
-              } else {
-                $scope.sortPortfolio[i].languageName = $scope.sortPortfolio[i].country;
-                $scope.sortPortfolio[i].languageTitle = $scope.sortPortfolio[i].city;
-                $scope.sortPortfolio[i].description = $scope.sortPortfolio[i].description;
-                $scope.sortPortfolio[i].country = $scope.sortPortfolio[i].date;
-                $scope.sortPortfolio[i].city = $scope.sortPortfolio[i].title;
-
-              }
-            }
-          });
+          // $rootScope.$watch('arg', function() {
+          //   for (var i = 0; i < $scope.sortPortfolio.length; i++) {
+          //     if ($rootScope.arg === "English"){
+          //       $scope.sortPortfolio[i].languageName = $scope.sortPortfolio[i].country_en;
+          //       $scope.sortPortfolio[i].languageTitle = $scope.sortPortfolio[i].city_en;
+          //       $scope.sortPortfolio[i].description = $scope.sortPortfolio[i].description_en;
+          //       $scope.sortPortfolio[i].country = $scope.sortPortfolio[i].date_en;
+          //       $scope.sortPortfolio[i].city = $scope.sortPortfolio[i].title_en;
+          //
+          //     } else {
+          //       $scope.sortPortfolio[i].languageName = $scope.sortPortfolio[i].country;
+          //       $scope.sortPortfolio[i].languageTitle = $scope.sortPortfolio[i].city;
+          //       $scope.sortPortfolio[i].description = $scope.sortPortfolio[i].description;
+          //       $scope.sortPortfolio[i].country = $scope.sortPortfolio[i].date;
+          //       $scope.sortPortfolio[i].city = $scope.sortPortfolio[i].title;
+          //
+          //     }
+          //   }
+          // });
 
       });
     }

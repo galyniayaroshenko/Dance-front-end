@@ -82,9 +82,9 @@
                             <a play-from-playlist="song">{{ song.title }}</a>
                             -
                             <a remove-from-playlist="song" data-index="{{$index}}">
-                                <small>(list[0].remove)</small>
+                                <small>({{list[0].remove}})</small>
                             </a>
-                            <span ng-if="currentPlaying.id == song.id"> - (list[0].current)</span>
+                            <span ng-if="currentPlaying.id == song.id"> - ({{list[0].current}})</span>
                         </li>
                     </ol>
       </div>

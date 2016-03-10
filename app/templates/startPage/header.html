@@ -1,30 +1,32 @@
 <header class="main_head main_color_bg"  parallax-background parallax-ratio="0.4" parallaxVerticalOffset="10" parallaxHorizontalOffset="10">
-    <div class="row">
-      <div class="col-md-12">
-      <ul class="language">
-        <li ng-click="getLanguage('Ukraine')" ng-class="{ 'active': active('Ukraine') }">UK</li>
-        <li ng-click="getLanguage('English')" ng-class="{ 'active': active('English') }">USA</li>
-      </ul>
-      <button class="toggle_mnu" toggle-menu>
 
-        <span class="sandwich">
-          <span class="sw-topper"></span>
-          <span class="sw-bottom"></span>
-          <span class="sw-footer"></span>
-        </span>
-      </button>
-      <nav class="top_mnu">
-        <ul>
-          <li><a href="#about">{{list[0].s1_about_us}}</a></li>
-          <li><a ui-sref="base.portfolio">{{list[0].s1_portfolio}}</a></li>
-          <li><a ui-sref="base.video">{{list[0].s1_video}}</a></li>
-          <li><a ui-sref="base.songs">{{list[0].s1_song}}</a></li>
-          <li><a href="#people">{{list[0].s1_people_who_have_made_efforts}}</a></li>
-          <li><a ui-sref="base.contact">{{list[0].s1_contacts}}</a></li>
-          <li><a ui-sref="base.news">{{list[0].s1_news}}</a></li>
+      <div class="row">
+        <div class="col-md-12">
+        <ul class="language">
+          <li ng-click="getLanguage('Ukraine')" ng-class="{ 'active': active('Ukraine') }">UK</li>
+          <li ng-click="getLanguage('English')" ng-class="{ 'active': active('English') }">En</li>
         </ul>
-      </nav>
+        <button class="toggle_mnu" toggle-menu>
+
+          <span class="sandwich">
+            <span class="sw-topper"></span>
+            <span class="sw-bottom"></span>
+            <span class="sw-footer"></span>
+          </span>
+        </button>
+        <nav class="top_mnu">
+          <ul>
+            <li><a ui-sref="base.index">{{list[0].home}}</a></li>
+            <li><a ui-sref="base.portfolio">{{list[0].s1_portfolio}}</a></li>
+            <li><a ui-sref="base.video">{{list[0].s1_video}}</a></li>
+            <li><a ui-sref="base.songs">{{list[0].s1_song}}</a></li>
+            <li><a href="#people">{{list[0].s1_people_who_have_made_efforts}}</a></li>
+            <li><a ui-sref="base.contact">{{list[0].s1_contacts}}</a></li>
+            <li><a ui-sref="base.news">{{list[0].s1_news}}</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
-</div>
+
 </header>
