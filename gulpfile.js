@@ -7,7 +7,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
-//var bourbon = require('node-bourbon');
 
 gulp.task('webserver', function() {
   gulp.src('./build/')
@@ -46,7 +45,6 @@ gulp.task('jsUglify', function() {
 gulp.task('buildLib', function() {
   gulp.src(require('./dependencies.json').dependencies)
   .pipe(concat('vendor.js'))
-  //.pipe(uglify())
   .pipe(gulp.dest('./build/js'));
 });
 
@@ -79,14 +77,6 @@ gulp.task('templatesDirect', function() {
   .pipe(gulp.dest('./build/templates'));
 });
 
-
-// gulp.task('styles', function () {
-// 	return gulp.src('./app/pre_proc/sass/**/*.sass')
-//   .pipe(sass({
-// 		includePaths: require('node-bourbon').includePaths
-// 	}).on('error', sass.logError))
-// 	.pipe(gulp.dest('./app/css/'));
-// });
 gulp.task('styles', function () {
 	gulp.src(['./app/pre_proc/sass/**/*.sass',
             './app/pre_proc/scss/**/*.scss'
@@ -97,7 +87,6 @@ gulp.task('styles', function () {
 	.pipe(autoprefixer())
 	.pipe(gulp.dest('app/css/'));
 });
-
 
 gulp.task('watch', ['cssConcat'], function () {
   gulp.watch('./app/css/**/*.css', ['cssConcat']);

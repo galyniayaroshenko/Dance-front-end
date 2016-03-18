@@ -83,7 +83,6 @@
 </section>
 
 
-
 	<section id="people" class="homesect s_gray section_7"  >
     <div class="section_header">
   		<h2>{{list[0].s1_people_who_have_made_efforts}}</h2>
@@ -92,23 +91,33 @@
   		</div>
   	</div>
 		<div class="section-pb">
-
 			<div class="slider">
-
 			  <div class="slide">
-
 			    <div class="container">
 			      <div class="row">
 							<div id="owl-demo" class="owl-carousel owl-theme">
+									<div ng-repeat="slide in peopleEffortList"><div class='img-wrap'><img src= "{{slide.foto.url}}"></div><h3>{{slide.nameLan}}</h3><div class='slide-descr'>{{slide.professionLan}}</div><p>{{slide.descriptionLan}}</p></div>
+									</div>
+								</div>
 							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			</div>
-			</div>
-			</div>
-			</div>
-
-
 		</div>
+	</section>
+
+	<section>
+		<div es-carousel="7">
+		        <div es-card >
+		             <span>{{cardsArrayFrom[0].descriptionLan}}</span>
+		        </div>
+		        <div es-card >
+		            <!-- template for second card -->
+		        </div>
+		       <!-- ... templates for the next cards -->
+		    </div>
+	<span>{{cardsArrayFrom[0].descriptionLan}}</span>
 	</section>
 
 

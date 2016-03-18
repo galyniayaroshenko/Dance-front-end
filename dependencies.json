@@ -5,6 +5,7 @@
     "./node_modules/angular-ui-router/release/angular-ui-router.js",
     "./bower_components/angular-soundmanager2/dist/angular-soundmanager2.min.js",
     "./bower_components/angular-translate/angular-translate.min.js",
+    "./bower_components/angular-es-carousel/js/esCarousel.js",
     "./node_modules/angular-resource/angular-resource.js",
     "./node_modules/ng-storage/ngStorage.js",
     "./app/libs/angular-parallax/angular-parallax.js",

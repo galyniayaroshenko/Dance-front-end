@@ -1,12 +1,9 @@
 angular.module('myApp')
 .controller('SongsListController', ['$scope', '$state', '$window', 'Music', '$rootScope',
   function($scope, $state, $window, Music, $rootScope) {
-  //$scope.musicList = Music.get();
   $scope.musicList = Music.get(function(data){
     $scope.songs = [];
     $scope.musicList = data.results;
-    console.log('list', $scope.musicList);
-
     $rootScope.$watch('arg', function() {
       for (var i = 0; i < $scope.musicList.length; i++) {
         if ($rootScope.arg === "English"){
@@ -19,8 +16,6 @@ angular.module('myApp')
 
         }
       }
-      console.log('!@#musicList', $scope.musicList);
-      console.log('$scope.musicList.length', $scope.musicList.length);
       $scope.songs = [];
       for (var i = 0; i < $scope.musicList.length; i++) {
 
@@ -30,10 +25,6 @@ angular.module('myApp')
           description: $scope.musicList[i].descriptionLan,
           img: $scope.musicList[i].img.url});
         };
-        console.log('!@#so', $scope.songs);
     });
-
-
     });
-
 }]);

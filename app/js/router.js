@@ -10,7 +10,6 @@ angular.module('myApp')
       views: {
         '@': {
           templateUrl: 'templates/startPage/layout.html'
-            //controller: 'ProfileController'
         },
         'header@base': {
           templateUrl: 'templates/startPage/header.html'
@@ -21,8 +20,6 @@ angular.module('myApp')
         },
         'footer@base': {
           templateUrl: 'templates/startPage/footer.html'
-        //  controller: 'ProfileController'
-          // controller: 'headerController'
         }
       }
     })
@@ -77,24 +74,6 @@ angular.module('myApp')
         'main@base': {
           templateUrl: 'templates/songs.html',
           controller: 'SongsListController'
-        }
-      }
-    })
-    .state('base.music', {
-      url: '/music',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/music.html',
-          controller: 'MusicListController'
-        }
-      }
-    })
-    .state('base.musicView', {
-      url: '/music/:id',
-      views: {
-        'main@base': {
-          templateUrl: 'templates/music-view.html',
-          controller: 'MusicViewController'
         }
       }
     })

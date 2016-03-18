@@ -5,6 +5,7 @@
     "./app/libs/linea/styles.css",
     "./app/libs/magnific-popup/magnific-popup.css",
     "./app/libs/animate/animate.css",
+    "./bower_components/angular-es-carousel/css/carousel.css",
     "./app/css/**/*.css"
   ]
 }

@@ -1,21 +1,15 @@
 angular.module('myApp')
 .controller('newsListController', ['$scope','$rootScope', '$state', '$window', 'news',
   function($scope, $rootScope, $state, $window, news) {
-  //$scope.musicList = Music.get();
   $scope.newsList = news.get(function(data){
     $scope.newsList = data.results;
-
     for (var i = 0; i < $scope.newsList.length; i++) {
       $scope.newsList[i].description1 = $scope.newsList[i].description1.substring(3,150);
     }
     for (var i = 0; i < $scope.newsList.length; i++) {
       $scope.newsList[i].description_en = $scope.newsList[i].description_en.substring(3,150);
     }
-
-
     $rootScope.$watch('arg', function() {
-      console.log("rootscope",$rootScope.arg);
-      console.log('lili', $scope.newsList);
       for (var i = 0; i < $scope.newsList.length; i++) {
         if ($rootScope.arg === "English"){
           $scope.newsList[i].languageName = $scope.newsList[i].name_en;
@@ -28,9 +22,5 @@ angular.module('myApp')
         }
       }
     });
-
-    console.log("Ура, я прийшов", $rootScope.arg);
-    console.log('new', $scope.newsList);
     });
-console.log("smile");
 }]);

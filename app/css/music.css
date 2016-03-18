@@ -4,7 +4,6 @@ a.polaroid {
     text-decoration: none;
     color: #333;
     padding: 10px 10px 20px 10px;
-    /*width: 200px;*/
     border: 1px solid #BFBFBF;
     background-color: white;
     z-index: 2;
@@ -23,11 +22,6 @@ a.polaroid:hover, a.polaroid:focus, a.polaroid:active {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
-}
-.polaroid img {
-    /*margin: 0 0 15px;*/
-    /*width: 200px;*/
-    /*height: 150px;*/
 }
 
 a img {

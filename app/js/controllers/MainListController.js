@@ -1,29 +1,22 @@
 angular.module('myApp')
 .controller('MainListController',
 ['$scope', '$state', '$window', 'AboutUs', 'HeadPortfolio', '$rootScope', 'PeopleEffort',  'Contact', '$stateParams', 'Category','$timeout','$http', '$timeout',
-function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffort, Contact, $stateParams, Category, $timeout, $http, $timeout) {
-  //$scope.musicList = Music.get();
-  Category.get(function(data) {
+  function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffort, Contact, $stateParams, Category, $timeout, $http, $timeout) {
+    Category.get(function(data) {
     $scope.category = data.results;
-    console.log("category set",$scope.category);
     $rootScope.$watch('arg', function() {
-      console.log('portRoot', $rootScope.arg);
 
       for (var i = 0; i < $scope.category.length; i++) {
         if ($rootScope.arg === "English"){
-          console.log('English set');
           $scope.category[i].nameLan = $scope.category[i].name_en;
         } else {
-            console.log('Ukraine set');
           $scope.category[i].nameLan = $scope.category[i].name;
-          console.log();
         }
       }
       $scope.cat = [];
       for (var i = $scope.category.length - 1; i > $scope.category.length - 4; i--) {
         $scope.cat.push($scope.category[i]);
       }
-      console.log("cat", $scope.cat);
     });
 
   });
@@ -50,10 +43,7 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffo
 
         }
       }
-      console.log('!@#aboutUsList', $scope.aboutUsList[0].objectId);
     });
-
-
   });
 
   HeadPortfolio.get(function(data){
@@ -67,14 +57,12 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffo
           $scope.portfolioUsList[i].descriptionLan = $scope.portfolioUsList[i].description_en;
           $scope.portfolioUsList[i].countryLan = $scope.portfolioUsList[i].contry_en;
           $scope.portfolioUsList[i].cityLan = $scope.portfolioUsList[i].city_en;
-
         } else {
           $scope.portfolioUsList[i].languageName = $scope.portfolioUsList[i].name;
           $scope.portfolioUsList[i].languageTitle = $scope.portfolioUsList[i].title;
           $scope.portfolioUsList[i].descriptionLan = $scope.portfolioUsList[i].description;
           $scope.portfolioUsList[i].countryLan = $scope.portfolioUsList[i].country;
           $scope.portfolioUsList[i].cityLan = $scope.portfolioUsList[i].city;
-
         }
       }
     });
@@ -96,73 +84,45 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffo
         });
       }, 5000);
     }
-
   });
-
 
   PeopleEffort.get(function(data){
-    $scope.peopleEffortList = data.results;
-    console.log('!!!!PeopleEffortssss', $scope.peopleEffortList);
-    //$scope.peopleEffortL = [];
-
-    $rootScope.$watch('arg', function() {
-      console.log("rootscopesssss",$rootScope.arg);
-      console.log('sss', $scope.peopleEffortList);
-      for (var i = 0; i < $scope.peopleEffortList.length; i++) {
-
-        if ($rootScope.arg === "English"){
-          $scope.peopleEffortList[i].nameLan = $scope.peopleEffortList[i].name_en;
-          $scope.peopleEffortList[i].professionLan = $scope.peopleEffortList[i].profession_en;
-          $scope.peopleEffortList[i].descriptionLan = $scope.peopleEffortList[i].description_en;
-
-        } else {
-          $scope.peopleEffortList[i].nameLan = $scope.peopleEffortList[i].name;
-          $scope.peopleEffortList[i].professionLan = $scope.peopleEffortList[i].profession;
-          $scope.peopleEffortList[i].descriptionLan = $scope.peopleEffortList[i].description;
-
-        }
-      } console.log('$scope.peopleEffortL', $scope.peopleEffortList);
-
-          $timeout(function () {
-            angular.element(document).ready(function() {
-              angular.element("#owl-demo").owlCarousel({
-                items : 1,
-                nav : true,
-                jsonSuccess : customDataSuccess($scope.peopleEffortList),
-                navText : "",
-                loop : true,
-                autoplay : true,
-                autoplayHoverPause : true,
-                fluidSpeed : 600,
-                autoplaySpeed : 600,
-                navSpeed : 600,
-                dotsSpeed : 600,
-                dragEndSpeed : 600
-              });
-
-            })
-          }, 5000);
-          function customDataSuccess(data){
-            var content = "";
-
-            for(var i = 0; i < data.length; i++){
-              var foto = data[i].foto.url;
-              var name = data[i].nameLan;
-              var profession = data[i].professionLan;
-              var description = data[i].descriptionLan;
-
-              content += "<div><div class='img-wrap'><img src= "+foto+"></div><h3>"+name+"</h3><div class='slide-descr'>"+profession+"</div><p>"+description+"</p></div>"
-
-            }
-            $("#owl-demo").html(content);
-          };
-    });
+  $scope.peopleEffortList = data.results;
+  $rootScope.$watch('arg', function() {
+    for (var i = 0; i < $scope.peopleEffortList.length; i++) {
+      if ($rootScope.arg === "English"){
+      $scope.peopleEffortList[i].nameLan = $scope.peopleEffortList[i].name_en;
+      $scope.peopleEffortList[i].professionLan = $scope.peopleEffortList[i].profession_en;
+      $scope.peopleEffortList[i].descriptionLan = $scope.peopleEffortList[i].description_en;
+      } else {
+      $scope.peopleEffortList[i].nameLan = $scope.peopleEffortList[i].name;
+      $scope.peopleEffortList[i].professionLan = $scope.peopleEffortList[i].profession;
+      $scope.peopleEffortList[i].descriptionLan = $scope.peopleEffortList[i].description;
+      }
+  }
+  $timeout(function() {
+  $(document).ready(function() {
+  $("#owl-demo").owlCarousel({
+  items : 1,
+  nav : true,
+  navText : "",
+  // loop : true,
+  autoplay : true,
+  autoplayHoverPause : true,
+  fluidSpeed : 600,
+  autoplaySpeed : 600,
+  navSpeed : 600,
+  dotsSpeed : 600,
+  dragEndSpeed : 600
   });
+  });
+  }, 0)
+  });
+  });
+
   Contact.get(function(data){
     $scope.contactList = data.results;
     $rootScope.$watch('arg', function() {
-      console.log("rootscope",$rootScope.arg);
-      console.log('ssslll', $scope.contactList);
       for (var i = 0; i < $scope.contactList.length; i++) {
         if ($rootScope.arg === "English"){
           $scope.contactList[i].name = $scope.contactList[i].name_en;
@@ -176,8 +136,6 @@ function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffo
 
         }
       }
-      console.log('asasas', $scope.contactList);
     });
-
   });
 }]);
