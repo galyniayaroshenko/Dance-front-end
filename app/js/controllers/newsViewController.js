@@ -14,7 +14,7 @@ angular.module('myApp')
               $scope.news.description = $scope.news.description1;
 
             }
-          $scope.news.description1 = $sce.trustAsHtml($scope.news.description);
+          $scope.news.description123 = $sce.trustAsHtml($scope.news.description);
         });
     });
   }]);

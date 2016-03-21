@@ -6,9 +6,10 @@ angular.module('myApp')
       $scope.category = data.results;
     })
 
-    Year.get1(function(data) {
-      $scope.year = data.results;
-    })
+    // Year.get1(function(data) {
+    //   $scope.year = data.results;
+    //   console.log('year', $scope.year);
+    // })
 
   Portfolio.get(function(data){
     $scope.sortPortfolio = data.results;
@@ -22,6 +23,13 @@ angular.module('myApp')
           $scope.sortPortfolio[i].languageCity = $scope.sortPortfolio[i].city;
         }
       }
+      console.log('port', $scope.sortPortfolio);
+      // console.log('id', $scope.sortPortfolio[2].year.objectId);
+      // Year.get1({ action: PaL9QAoB3V }, function(data) {
+      //   $scope.year = data.results;
+      //   console.log('year', $scope.year);
+      // })
+
     });
     });
 
@@ -49,6 +57,7 @@ angular.module('myApp')
     }
     $scope.setCategory = function(objectId) {
       var items2 = $scope.items2 = [];
+      $scope.portfolioName = [];
       function CatReturn(objectId) {
         return {
             method: 'GET',

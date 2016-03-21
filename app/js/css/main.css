@@ -526,7 +526,7 @@ svg path {
       .slider .owl-controls .owl-nav > div {
         height: 29px;
         width: 16px;
-        background-image: url(http://www.cheremosh.lviv.ua/test/img/slider_arrows.png);
+        background-image: url(../../img/slider_arrows.png);
         position: absolute;
         left: 20px;
         opacity: .5;

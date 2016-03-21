@@ -19,6 +19,7 @@
   "devDependencies": {},
   "dependencies": {
     "angular-translate": "^2.10.0",
-    "angular-es-carousel": "*"
+    "angular-es-carousel": "*",
+    "parallax.js": "^1.4.2"
   }
 }
