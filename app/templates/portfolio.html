@@ -1,19 +1,31 @@
       <header class="ae-container-fluid ae-container-fluid--full rk-header ">
-          <!-- <div class="ae-container-fluid rk-topbar">
+
+          <div class="ae-container-fluid rk-topbar">
             <h1 class="rk-logo"><a href="index.html">{{list[0].s1_portfolio}}<sup>cheremosh</sup></a></h1>
-          </div> -->
-          <div>
-            <h1 class="rk-logo"><a href="index.html">{{list[0].s1_portfolio}}<sup>cheremosh</sup></a></h1>
+            <!-- <nav class="rk-navigation">
+              <ul class="rk-menu">
+                <li class="active rk-menu__item" ng-repeat="years in year"><a ng-mouseover="setCategory(years.objectId)" href="" class="rk-menu__link">{{years.year}}</a>
+                  <nav class="rk-menu__sub">
+                    <ul class="rk-container">
+                      <li ng-repeat="category in portfolioName" class="rk-menu__item"><a ng-click="setPortfolio(years.objectId, category.objectId)" href="" class="rk-menu__link">{{category.nameLan}}</a></li>
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            </nav>ui-sref="base.portfolioAlt({id:portfolioSort.objectId})" ng-click="setPortfolio(portfolioSort.years, portfolioSort.languageCountry)"-->
+
           </div>
         </header>
         <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio rk-main">
                 <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
                   <a ng-repeat="portfolioSort in portfolioName" ui-sref="base.portfolioExpanded({id:portfolioSort.category.objectId, anotherParam:portfolioSort.year.objectId})"  class="rk-item ae-masonry__item">
+
                     <img src="{{portfolioSort.img.url}}" alt="">
                     <div class="item-meta">
                       <h2>{{portfolioSort.languageCountry}}</h2>
                       <p>{{portfolioSort.languageCity}}</p>
-                      <h2>{{portfolioSort.yearOut}}</h2>
+
+                      <!-- <h2>{{portfolioSort.yearOut}}</h2> -->
 
                     </div>
                   </a>

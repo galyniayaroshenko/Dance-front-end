@@ -2,15 +2,10 @@
 $(document).ready(function() {
   $('.parallax-window').parallax({imageSrc: 'http://cheremosh.lviv.ua/test/img/bg7.jpg'});
 });
-function heightDetect() {
-  $(".main_head").css("height", $(window).height());
-};
-heightDetect();
-$(window).resize(function() {
-  heightDetect();
-});
+
 </script>
 <header class="main_head main_color_bg parallax-window"  data-parallax="scroll"  data-image-src="http://cheremosh.lviv.ua/test/img/bg7.jpg" parallax data-z-index="1">
+
       <div class="row">
         <div class="col-md-12">
         <ul class="language">
@@ -18,11 +13,13 @@ $(window).resize(function() {
           <li ng-click="getLanguage('English')" ng-class="{ 'active': active('English') }">EN</li>
         </ul>
 
+
         <!-- <div ng-if="bool" class="fade">
          Fade me in out
       </div>
       <button ng-click="bool=true">Fade In!</button>
       <button ng-click="bool=false">Fade Out!</button> data-position="center center" style="position:static!important;"-->
+
 
         <button class="toggle_mnu" toggle-menu>
 

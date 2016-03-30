@@ -20,7 +20,11 @@
   "dependencies": {
     "angular-translate": "^2.10.0",
     "angular-es-carousel": "*",
+<<<<<<< HEAD
     "parallax.js": "^1.4.2",
     "ngGallery": "*"
+=======
+    "parallax.js": "^1.4.2"
+>>>>>>> 8d365b9e60b47692ca1418a002cdc7dea62502c4
   }
 }

@@ -6,5 +6,4 @@ angular
   'ui.router',
   'angularSoundManager',
   'jkuri.gallery'
-
 ]);
