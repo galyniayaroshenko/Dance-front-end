@@ -1,0 +1,45 @@
+<div class="grid_4" id="contact">
+<div class="container">
+  <h1 class="blog_head">{{list[0].s1_contacts}}</h1>
+    <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1142725182794!2d24.020006814970248!3d49.84031033902106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add717532da69%3A0xf0cb97b8441ff1fe!2z0LLRg9C7LiDQo9C90ZbQstC10YDRgdC40YLQtdGC0YHRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1453130267591" width="600" height="450" style="margin-bottom: 35px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <div class="section_content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 contact_left" >
+            <h3>{{list[0].s1_contacts}}</h3>
+            <p>{{list[0].artistic_director}}:</p>
+            <p class="head">{{contactList[0].name}}</p>
+              <p>{{list[0].PHONE}}: {{contactList[0].headTelephone}} {{list[0].Your_E_mail}}:<b> {{contactList[0].headEmail}}</b></p>
+              <p class="addr">{{contactList[0].mailing_address}}:</p>
+              <p>{{contactList[0].street}}</p>
+              <p class="some-text">{{list[0].national}}</p>
+              <p>{{list[0].PHONE}}: {{contactList[0].phone}}</p>
+              <p>{{list[0].fax}}: {{contactList[0].fax}}</p>
+          </div>
+				<div class="col-md-6 col-sm-6">
+          <h3>{{list[0].s5_about_section}}</h3>
+					<form action="http://formspree.io/cheremosh.lviv.ua@gmail.com" class="main_form" novalidate target="_blank" method="post">
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_name}}:
+							<input type="text" name="name" placeholder="{{list[0].Your_name}}" style="color: #999;!impotant" data-validation-required-message="{{list[0].You_must_enter_your_name}}" required />
+							<span class="help-block text-danger"></span>
+						</label>
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_E_mail}}:
+							<input type="email" name="email" placeholder="{{list[0].Your_E_mail}}" data-validation-required-message="{{list[0].Incorrectly_entered_email}}" required />
+							<span class="help-block text-danger"></span>
+						</label>
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_message}}:
+							<textarea name="message" placeholder="{{list[0].Your_message}}" data-validation-required-message="{{list[0].You_must_enter_a_message}}" required></textarea>
+							<span class="help-block text-danger"></span>
+						</label>
+						<button>{{list[0].button}}</button>
+					</form>
+				</div>
+			</div>
+   </div>
+</div>

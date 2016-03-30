@@ -1,0 +1,13 @@
+<div class="grid_4">
+  <div class="container">
+    <h1 class="blog_head">{{list[0].s1_news}}</h1>
+     <div class="blog_grid span2">
+       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 blog_box" ng-repeat="news in newsList">
+          <a ui-sref="base.newsView({id:news.objectId})" class="mask"><img ng-src="{{news.img.url}}" alt="image" class="img-responsive zoom-img" alt=""/></a>
+        <h3><a ui-sref="base.newsView">{{news.languageName}}</a></h3>
+        <p>{{news.description}}</p>
+          <div class="description"><a ui-sref="base.newsView({id:news.objectId})">{{list[0].Read_more}}</a></div>
+       </div>
+     </div>
+   </div>
+</div>

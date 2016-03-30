@@ -1,0 +1,160 @@
+<section id="about" class="s_about bg_light" header-animate left-right-animate animate>
+	<div class="section_header">
+		<h2>{{list[0].s1_about_us}}</h2>
+		<div class="s_descr_wrap">
+			<div class="s_descr">{{list[0].s2_about_section}}</div>
+		</div>
+	</div>
+	<div class="section_content"  header-animate popup >
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-push-4 animation_1">
+					<h3>{{list[0].photo}}</h3>
+					<div class="person">
+						<a href='{{aboutUsList[0].foto.url}}' class="popup"><img ng-src="{{aboutUsList[0].foto.url}}" alt="Alt" /></a>
+					</div>
+          <div class="social_wrap">
+						<ul>
+							<li><a href="https://www.facebook.com/cheremosh.ensemble" target="_blank"><span class="icon-facebook2"></span></a></li>
+							<li><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://vk.com/cheremosh_ensemble" target="_blank"><span class="icon-vk"></span></i></a></li>
+							<li><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://www.youtube.com/watch?v=vpCGguOpyyU" target="_blank"></i><span class="icon-youtube2"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-pull-4 animation_2">
+					<h3>{{aboutUsList[0].languageTitle}}</h3>
+          <h2 class="personal_header">{{aboutUsList[0].languageName}}</h2>
+					<p>{{aboutUsList[0].description}}</p>
+					<div class="description"><a ui-sref="base.more({id:aboutUsList[0].objectId})">{{list[0].Read_more}}</a></div>
+        </div>
+				<div class="col-md-4 animation_3 personal_last_block">
+					<h3>{{aboutUsList[1].languageTitle}}</h3>
+					<h2 class="personal_header">{{aboutUsList[1].languageName}}</h2>
+					<ul>
+						<li>{{aboutUsList[1].description}}</li>
+					</ul>
+          <div class="description"><a ui-sref="base.more({id:aboutUsList[1].objectId})">{{list[0].Read_more}}</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="s_portfolio bg_dark"  header-animate>
+	<div class="section_header">
+		<h2>{{list[0].s1_portfolio}}</h2>
+		<div class="s_descr_wrap">
+			<div class="s_descr">{{list[0].s3_about_section}}</div>
+		</div>
+	</div>
+	<div class="section_content">
+		<div class="container">
+			<div class="row">
+				<div class="filter_div controls">
+					<ul>
+						<li class="asd" data-filter="all">{{list[0].all_other_trips}}</li>
+						<li ng-repeat="categorys in cat" class="filter" data-filter=".{{categorys.objectId}}">{{categorys.nameLan}}</li>
+					</ul>
+				</div>
+				<div id="portfolio_grid">
+					<div ng-repeat="portfolioUsLists in portfolioUsList" pop class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item {{portfolioUsLists.category.objectId}}">
+						<img src="{{portfolioUsLists.img.url}}" alt="Alt" />
+						<div class="port_item_cont"  >
+							<h3>{{portfolioUsLists.countryLan}}</h3>
+							<p>{{portfolioUsLists.cityLan}}</p>
+							<a href="#" class="popup_content">{{list[0].all_other_trips}}</a>
+						</div>
+						<div class="hidden">
+							<div class="podrt_descr">
+								<div class="modal-box-content">
+									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
+									<h3>{{portfolioUsLists.countryLan}} {{portfolioUsLists.cityLan}}</h3>
+									<p>{{portfolioUsLists.descriptionLan}}</p>
+									<img src="{{portfolioUsLists.img.url}}" alt="Alt" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+	<section id="people" class="homesect s_gray section_7"  >
+    <div class="section_header">
+  		<h2>{{list[0].s1_people_who_have_made_efforts}}</h2>
+  		<div class="s_descr_wrap">
+  			<div class="s_descr">{{list[0].s2_about_section}}</div>
+  		</div>
+  	</div>
+		<div class="section-pb">
+			<div class="slider">
+			  <div class="slide">
+			    <div class="container">
+			      <div class="row">
+							<div id="owl-demo" class="owl-carousel owl-theme">
+									<div ng-repeat="slide in peopleEffortList"><div class='img-wrap'><img src= "{{slide.foto.url}}"></div><h3>{{slide.nameLan}}</h3><div class='slide-descr'>{{slide.professionLan}}</div><p>{{slide.descriptionLan}}</p></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section id="contacts" class="s_contacts bg_light" >
+	<div class="section_header">
+		<h2>{{list[0].s1_contacts}}</h2>
+		<div class="s_descr_wrap">
+			<div class="s_descr">{{list[0].s5_about_section}}</div>
+		</div>
+	</div>
+	<div class="section_content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="contact_box">
+						<div class="contacts_icon icon-basic-geolocalize-05"><span class="icon-home"></span></div>
+						<h3>{{list[0].ADDRESS}}:</h3>
+						<p>{{contactList[0].street}}</p>
+					</div>
+					<div class="contact_box">
+						<div class="contacts_icon icon-basic-smartphone"><span class="icon-phone"></span></div>
+						<h3>{{list[0].PHONE}}:</h3>
+						<p>{{contactList[0].headTelephone}}</p>
+					</div>
+					<div class="contact_box">
+						<div class="contacts_icon icon-basic-webpage-img-txt"><span class="icon-cloud"></span></div>
+						<h3>{{list[0].WEBSITE}}:</h3>
+						<p><a href="#" target="_blank">{{contactList[0].headEmail}}</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<form action="http://formspree.io/cheremosh.lviv.ua@gmail.com" class="main_form" novalidate target="_blank" method="post">
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_name}}:
+							<input type="text" name="name" placeholder="{{list[0].Your_name}}" style="color: #999;!impotant" data-validation-required-message="{{list[0].You_must_enter_your_name}}" required />
+							<span class="help-block text-danger"></span>
+						</label>
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_E_mail}}:
+							<input type="email" name="email" placeholder="{{list[0].Your_E_mail}}" data-validation-required-message="{{list[0].Incorrectly_entered_email}}" required />
+							<span class="help-block text-danger"></span>
+						</label>
+						<label class="form-group">
+							<span class="color_element">*</span>{{list[0].Your_message}}:
+							<textarea name="message" placeholder="{{list[0].Your_message}}" data-validation-required-message="{{list[0].You_must_enter_a_message}}" required></textarea>
+							<span class="help-block text-danger"></span>
+						</label>
+						<button>{{list[0].button}}</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
