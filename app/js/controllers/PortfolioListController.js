@@ -18,9 +18,22 @@ angular.module('myApp')
         if ($rootScope.arg === "English"){
           $scope.sortPortfolio[i].languageCountry = $scope.sortPortfolio[i].country_en;
           $scope.sortPortfolio[i].languageCity = $scope.sortPortfolio[i].city_en;
+          $scope.sortPortfolio[i].yearOut = $http(yearReturn($scope.sortPortfolio[i].year.objectId)).success(function(resp) {
+            
+            $scope.y = resp;
+          console.log('r', resp.year);
+         console.log('$s', $scope.y.year);
+          });
         } else {
           $scope.sortPortfolio[i].languageCountry = $scope.sortPortfolio[i].country;
           $scope.sortPortfolio[i].languageCity = $scope.sortPortfolio[i].city;
+          $scope.sortPortfolio[i].yearOut =$http(yearReturn($scope.sortPortfolio[i].year.objectId)).success(function(resp) {
+
+            $scope.y = resp;
+          console.log('r', resp.year);
+         console.log('$s', $scope.y.year);
+          });
+
         }
       }
       console.log('port', $scope.sortPortfolio);
@@ -41,8 +54,35 @@ angular.module('myApp')
         return result;
       }
 
+
       $scope.portfolioName = unique($scope.sortPortfolio);
       console.log('!!!!!', $scope.portfolioName);
+      console.log('id', $scope.portfolioName[0].year.objectId);
+
+
+
+      function yearReturn(objectId) {
+          return {
+              method: 'GET',
+              url: 'https://api.parse.com/1/classes/year/' + objectId
+          }
+        }
+
+
+      for (var i = 0; i < $scope.portfolioName.length; i++) {
+        console.log($scope.portfolioName[i].year.objectId);
+        //console.log('year', yearReturn($scope.portfolioName[i].year.objectId));
+        $http(yearReturn($scope.portfolioName[i].year.objectId)).success(function(resp) {
+           //var year = [];
+          $scope.y = resp;
+        //  year.push(y);
+      //  console.log('resp', year.year);
+        console.log('respyear', resp.year);
+       console.log('$scope.year', $scope.y.year);
+        });
+
+      }
+
     });
     });
 

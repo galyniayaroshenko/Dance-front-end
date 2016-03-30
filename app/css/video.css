@@ -85,8 +85,21 @@ img.ng-thumb {
 
 .ng-gallery-content > a.close-popup {
 margin: 100px 30px 0 0;
+border: 1px solid #fff;
+width: 20px;
+}
+.ng-gallery-content > a.nav-left {
+	border: 1px solid #fff;
+	width: 30px;
+}
+.ng-gallery-content > a.nav-right {
+	border: 1px solid #fff;
+	width: 30px;
 }
 
 .fa-close {
 color: #fff;
+}
+.rk-header {
+	z-index: 0;
 }
