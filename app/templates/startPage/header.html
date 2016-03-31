@@ -31,7 +31,7 @@ $(document).ready(function() {
         </button>
         <nav class="top_mnu">
           <ul>
-            <li><a ui-sref="base.index">{{list[0].home}}</a></li>
+            <li><a ui-sref="base.index" ng-click="LoadPortfolio()">{{list[0].home}}</a></li>
             <li><a ui-sref="base.portfolio">{{list[0].s1_portfolio}}</a></li>
             <li><a ui-sref="base.video">{{list[0].s1_video}}</a></li>
             <li><a ui-sref="base.songs">{{list[0].s1_song}}</a></li>

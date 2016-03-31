@@ -1,9 +1,10 @@
+<div class="loading" ng-show="load"><img src="../img/preloader.gif" /></div>
 <div class="grid_4">
 		<div class="container">
 			<h1 class="blog_head">{{viewAboutUs.languageTitle}}</h1>
 		    <div class="blog_grid">
 		      <div class="blog_box">
-		        <a ui-sref="base.contactDescription" class="mask"><img ng-src="{{viewAboutUs.foto.url}}" alt="image" class="img-responsive zoom-img" alt=""/></a>
+		        <a ui-sref="base.contactDescription" class="mask"><img ng-src="{{viewAboutUs.foto.url}}" class="img-responsive zoom-img" alt=""/></a>
 		     	<h3><a ui-sref="base.contactDescription" style="display:block; padding-top:33px; padding-bottom: 8px;">{{viewAboutUs.languageName}}</a></h3>
 		     	<p>{{viewAboutUs.description}}</p>
 		     </div>

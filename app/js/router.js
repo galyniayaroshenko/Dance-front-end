@@ -12,7 +12,8 @@ angular.module('myApp')
           templateUrl: 'templates/startPage/layout.html'
         },
         'header@base': {
-          templateUrl: 'templates/startPage/header.html'
+          templateUrl: 'templates/startPage/header.html',
+          controller: 'HeadeListController'
         },
         'main@base': {
           templateUrl: 'templates/startPage/main.html',

@@ -1,7 +1,9 @@
 angular.module('myApp')
 .controller('SongsListController', ['$scope', '$state', '$window', 'Music', '$rootScope',
   function($scope, $state, $window, Music, $rootScope) {
+    $scope.load = "loading";
   $scope.musicList = Music.get(function(data){
+    $scope.load = '';
     $scope.songs = [];
     $scope.musicList = data.results;
     $rootScope.$watch('arg', function() {

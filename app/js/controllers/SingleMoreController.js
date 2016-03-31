@@ -1,7 +1,9 @@
 angular.module('myApp')
   .controller('SingleMoreController', ['$scope','$stateParams', '$rootScope', 'AboutUs',
     function($scope, $stateParams, $rootScope, AboutUs) {
+      $scope.load = "loading";
       AboutUs.get({action: $stateParams.id }, function(data) {
+        $scope.load = '';
         $scope.viewAboutUs = data;
         $rootScope.$watch('arg', function() {
             if ($rootScope.arg === "English"){

@@ -105,3 +105,7 @@ color: #fff;
 .rk-header {
 	z-index: 0;
 }
+.loading {
+	text-align: center;
+	margin-top: 200px;
+}

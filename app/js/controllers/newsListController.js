@@ -1,7 +1,9 @@
 angular.module('myApp')
 .controller('newsListController', ['$scope','$rootScope', '$state', '$window', 'news',
   function($scope, $rootScope, $state, $window, news) {
+    $scope.load = "loading";
   $scope.newsList = news.get(function(data){
+    $scope.load = '';
     $scope.newsList = data.results;
     for (var i = 0; i < $scope.newsList.length; i++) {
       $scope.newsList[i].description1 = $scope.newsList[i].description1.substring(3,150);

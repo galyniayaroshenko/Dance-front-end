@@ -1,12 +1,13 @@
 angular.module('myApp')
 .controller('PortfolioListController', ['Year', 'Category', '$stateParams', '$scope', '$state', '$window', 'Portfolio', '$http', '$rootScope',
 function(Year, Category, $stateParams, $scope, $state, $window, Portfolio, $http, $rootScope) {
-
+  $scope.load = "loading";
   Category.get(function(data) {
     $scope.category = data.results;
   })
 
   Portfolio.get(function(data){
+    $scope.load = '';
 
     function yearReturn(objectId) {
       return {

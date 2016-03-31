@@ -46,6 +46,9 @@ angular.module('myApp')
     });
   });
 
+
+
+  $rootScope.$on('$viewContentLoaded', function() {
   HeadPortfolio.get(function(data){
     $scope.portfolioUsList = data.results;
 
@@ -65,9 +68,9 @@ angular.module('myApp')
           $scope.portfolioUsList[i].cityLan = $scope.portfolioUsList[i].city;
         }
       }
-    });
 
-    if ($scope.portfolioUsList) {
+console.log("aasasasasasasas");
+
       $timeout(function() {
         $(document).ready(function() {
           $('.asd').addClass("filter");
@@ -83,9 +86,9 @@ angular.module('myApp')
           });
         });
       }, 5000);
-    }
+    });
   });
-
+});
   PeopleEffort.get(function(data){
   $scope.peopleEffortList = data.results;
   $rootScope.$watch('arg', function() {

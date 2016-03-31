@@ -1,8 +1,10 @@
 angular.module('myApp')
 .controller('VideoListController', ['$scope', '$state', '$window', 'Video', '$sce', '$rootScope',
   function($scope, $state, $window, Video, $sce, $rootScope) {
+    $scope.load = "loading";
   $scope.videoList = Video.get(function(data){
     $scope.videoList = data.results;
+    $scope.load = '';
     $rootScope.$watch('arg', function() {
       for (var i = 0; i < $scope.videoList.length; i++) {
         if ($rootScope.arg === "English"){
