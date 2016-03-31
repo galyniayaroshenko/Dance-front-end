@@ -1,6 +1,7 @@
 angular.module('myApp')
   .controller('MainLanguage', ['$scope','$state', '$rootScope', '$window', 'Language', '$http',
     function ($scope, $state, $rootScope, $window, Language, $http) {
+      $scope.load = "loading";
       $rootScope.arg = "Ukraine";
       $scope.currentActive = "Ukraine";
       $scope.active = function(arg) {
@@ -13,7 +14,9 @@ angular.module('myApp')
               where: {name:$rootScope.arg}
           }
         }).then(function(result) {
+          $scope.load = '';
           $scope.list = result.data.results;
+          console.log('$scope.list', $scope.list);
       });
 
       $scope.getLanguage = function (arg) {
@@ -29,6 +32,7 @@ angular.module('myApp')
                 where: {name:arg}
             }
           }).then(function(result) {
+            $scope.load = '';
             $scope.list = result.data.results;
         });
       };

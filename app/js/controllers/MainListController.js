@@ -2,7 +2,9 @@ angular.module('myApp')
 .controller('MainListController',
 ['$scope', '$state', '$window', 'AboutUs', 'HeadPortfolio', '$rootScope', 'PeopleEffort',  'Contact', '$stateParams', 'Category','$timeout','$http', '$timeout',
   function($scope, $state, $window, AboutUs, HeadPortfolio, $rootScope, PeopleEffort, Contact, $stateParams, Category, $timeout, $http, $timeout) {
+    $scope.load = "loading";
     Category.get(function(data) {
+      $scope.load = '';
     $scope.category = data.results;
     $rootScope.$watch('arg', function() {
 
@@ -21,6 +23,7 @@ angular.module('myApp')
 
   });
   AboutUs.get(function(data){
+    $scope.load = '';
     $scope.aboutUsList = data.results;
     for (var i = 0; i < $scope.aboutUsList.length; i++) {
       $scope.aboutUsList[i].description1 = $scope.aboutUsList[i].description1.substring(0,400);
@@ -50,6 +53,7 @@ angular.module('myApp')
 
   $rootScope.$on('$viewContentLoaded', function() {
   HeadPortfolio.get(function(data){
+    $scope.load = '';
     $scope.portfolioUsList = data.results;
 
     $rootScope.$watch('arg', function() {
@@ -90,6 +94,7 @@ console.log("aasasasasasasas");
   });
 });
   PeopleEffort.get(function(data){
+    $scope.load = '';
   $scope.peopleEffortList = data.results;
   $rootScope.$watch('arg', function() {
     for (var i = 0; i < $scope.peopleEffortList.length; i++) {
@@ -124,6 +129,7 @@ console.log("aasasasasasasas");
   });
 
   Contact.get(function(data){
+    $scope.load = '';
     $scope.contactList = data.results;
     $rootScope.$watch('arg', function() {
       for (var i = 0; i < $scope.contactList.length; i++) {
