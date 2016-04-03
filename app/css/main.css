@@ -391,9 +391,9 @@ svg path {
 .podrt_descr {
   background-color: #fff;
   max-width: 500px;
-  margin: auto; }
-  .podrt_descr p,
-  .podrt_descr h3 {
+  margin: auto;
+  font-size: 16px; }
+  .podrt_descr h3, .podrt_descr p {
     padding: 20px;
     padding-bottom: 0; }
   .podrt_descr h3 {
@@ -401,6 +401,7 @@ svg path {
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
+    font-size: 20px;
     margin-top: 20px;
     padding-top: 25px; }
   .podrt_descr p {
