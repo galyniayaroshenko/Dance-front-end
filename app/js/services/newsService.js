@@ -10,4 +10,4 @@ angular.module('myApp')
       update: { method: 'PUT',  params: { action: '@action'  } },
       id: {method: 'GET', params: { action: '$resource.id' } }
     });
-  }]);s
+  }]);
